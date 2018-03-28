@@ -1,0 +1,1175 @@
+
+
+/*   ----------------  Body **************************** */
+body{
+  background-image: url('../images_prov/home-01.jpg'); 
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+ /* ------------------------ Font Define ------------------------*/
+@font-face{
+
+  font-family: 'roots';
+
+  src: url('../polices/HEAVENLYROOTED.ttf');
+  src: url('../polices/HEAVENLYROOTED.ttf') format('truetype');
+}
+
+@font-face{
+
+  font-family: 'VBG';
+
+  src: url('../polices/ValeriaBoldGrunge.ttf');
+  src: url('../polices/ValeriaBoldGrunge.ttf') format('truetype');
+}
+
+/* ************************** Menu Navigation *********************** */
+
+.Menu{
+  position: relative;
+  list-style: none;
+  width: 967px;
+  height: 127px;  
+  background: url('../images_perso/menu-background.png');
+  margin: 0 auto;
+  color: white;
+  border: none;
+}
+.Menu li{
+  float: left;
+  letter-spacing: 1px;
+  font-family: 'roots';
+  margin-left: 20px;
+  padding-right: 10px;
+  font-size: 31px;
+  text-align: center;
+  height: 92px;
+  overflow: hidden;
+  display: block;
+  -webkit-transform: skew(-12deg);
+  -moz-transform: skew(-12deg);
+  -o-transform: skew(-12deg);
+  -ms-transform: skew(-12deg);
+}
+
+.Menu li a{
+  color: inherit;
+  text-decoration: none;
+  background-color:transparent;
+}
+a:hover{
+  color: inherit;
+  text-decoration: none;
+  background-color:transparent;
+}
+/* login/sign Up */
+#login_signup{
+  display: flex;
+  list-style: none;
+  padding-top: 20px;
+}
+.login{
+  cursor: pointer;
+}
+.login:hover{
+  color:#00ffba;
+}
+.signup{
+  cursor: pointer;
+}
+.signup:hover{
+  color: #00ffba;
+}
+
+.home, .blog, .about_us, .request_demo{
+  cursor: pointer;
+  border-right: 1px solid grey;
+  padding-top: 20px;
+  transition: color 0.3s ease;
+}
+
+.home{
+  padding-left: 70px;
+}
+.home:hover{
+  color:#00c344;
+}
+.blog:hover{
+  color:#ffa800;
+}
+.about_us:hover{
+  color:#ff0000;
+}
+.request_demo:hover{
+  color:#013dff;
+}
+
+
+/*****************************  first section       ****************************** */
+
+/* the small black in the middle-bottom */
+.logo-ho{
+  position: absolute;
+  width: 75px;
+  top: 90%;
+  left: 50%;
+  z-index: 1;
+}
+
+/* The logo Grow in Mid */
+.logo-test{
+  position: absolute;
+  top: 22%;
+  left: 40%;
+}
+/*  The role playing logo*/
+.role-playing{
+  position: absolute;
+  top: 62%;
+  left: 0%;
+  width: 50%;
+}
+/*  The small sign up for Beta logo */
+.for-beta{
+  position: absolute;
+  width: 30%;
+  top: 75.5%;
+  left: 18%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* a small Arrow aside to reach the Top of page */
+.scrollTop{
+  display: none;
+}
+.textToTop{
+  position: fixed;
+  top: 84.5%;
+  left: 94%;
+  z-index: 100;
+  width: 40px;
+  border-radius: 50px;
+}
+
+.DragonTop{
+  position: fixed;
+  top: 89%;
+  left: 94%;
+  z-index: 100;
+  width: 80px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+
+/* learn more logo  */
+
+.learn-logo{
+  position: absolute;
+  width: 13%;
+  top: 75%;
+  left: 4%;
+  border-radius: 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.learn-logo:hover{
+  transform: scale(1.1);
+}
+
+
+.we_recruit{
+  position: absolute;
+  left: 80%;
+  top: 80%;
+  width: 200px;
+  cursor: pointer;
+}
+
+    /************************   Second Area  ****************** */
+
+#second-sec{
+  position: absolute;
+  overflow: hidden;
+  background: url('../images_prov/home-001.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+}
+
+/****************  The differrent title text in the second section ****************/
+.secondo-title-1{
+  position: absolute;
+  font-size: 55px;
+  font-family: 'VBG';
+  color: white;
+  top: 12%;
+  left: 25%;
+}
+
+
+
+.secondo-title-2{
+  position: absolute;
+  font-size: 59px;
+  font-family: 'VBG';
+  color: white;
+  top: 30%;
+  left: 60%;
+}
+.secondo-title-3{
+  position: absolute;
+  font-size: 37px;
+  font-family: 'VBG';
+  color: white;
+  top: 66%;
+  left: 40%;
+}
+.secondo-title-4{
+  position: absolute;
+  font-size: 30px;
+  font-family: 'VBG';
+  color: white;
+  top: 82%;
+  left: 19%;
+}
+
+
+  /* ************************************** Third Area  ********************************* */
+
+#third-sec{
+  position: absolute;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('../images_prov/home-002.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  top: 200%;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid black;
+}
+
+
+.third-title{
+  position: relative;
+  width: 360px;
+  height: 115px;
+  margin-top: 10%;
+  margin-left: 10%;
+  text-align: center;
+}
+.third-title h3{
+  color: white;
+  font-size: 66px;
+  font-weight: 890;
+  font-family: 'VBG';
+  text-shadow: 0px 2px 46px silver;
+}
+
+.third-desc{
+  position: relative;
+  color: white;
+  width: 470px;
+  height: 115px;
+  margin-top: 5%;
+  margin-left: 7%;
+  text-align: center;
+  font-size: 23px;
+}
+
+.third-img{
+  position: absolute;
+  width: 340px;
+  height: 222px;
+  top: 33%;
+  left: 60%;                                    
+}
+.third-img-frame{
+  position: absolute;
+  width: 340px;
+  height: 222px;
+  top: 33%;
+  left: 60%;
+  z-index: 1;
+}
+
+
+
+  /* fifth Area  */
+
+#fifth-sec{
+  position: absolute;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: url('../images_prov/home-3.png');
+  background-size: cover;
+  top: 250%;
+  width: 100%;
+  height: 50%;
+  border-bottom: 2px solid black;
+}
+
+
+.fifth-title{
+  position: relative;
+  width: 290px;
+  height: 115px;
+  margin-top: 3%;
+  margin-left: 62%;
+  text-align: center;
+}
+.fifth-title h3{
+  color: white;
+  font-size: 35px;
+  font-weight: 890;
+  font-family: 'VBG';
+  text-shadow: 0px 2px 46px silver;
+}
+
+.fifth-desc{
+  position: relative;
+  color: white;
+  width: 370px;
+  height: 115px;
+  margin-top: 0%;
+  margin-left: 59%;
+  text-align: center;
+  font-size: 14px;
+}
+
+.fifth-img{
+  position: absolute;
+  width: 340px;
+  height: 220px;
+  top: 30%;
+  left: 10%;                                    
+}
+.fifth-img-frame{
+  position: absolute;
+  width: 340px;
+  height: 222px;
+  top: 30%;
+  left: 10%;
+  z-index: 1;
+}
+
+
+/* bootom area */
+.calendar{
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: 65%;
+  text-align: center;
+}
+.calendar-logo{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  left: 1%;
+}
+.calendar-desc{
+  position: relative;
+  padding-top: 7%;
+  left: 10%;
+  color: #dee2e6;
+  width: 279px;
+  height: 137px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/*  ToDo List */
+.To-Do-list{
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: 10%;
+  top: 48%;
+  text-align: center;
+}
+
+
+.checked-logo{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-top: 4%;
+}
+.To-Do-List-desc{
+  position: relative;
+  left: 8%;
+  color: #dee2e6;
+  width: 279px;
+  height: 137px;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+/* Skill's */
+.Skill-List{
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: 10%;
+  text-align: center;
+}
+.Skill-logo{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  left: 1%;
+}
+.Skill-desc{
+  position: relative;
+  padding-top: 7%;
+  left: 10%;
+  color: #dee2e6;
+  width: 279px;
+  height: 137px;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+/*  Daillies */
+.Daillies{
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: 65%;
+  top: 48%;
+  text-align: center;
+}
+
+
+.Daillies-logo{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-top: 4%;
+}
+.Daillies-desc{
+  position: relative;
+  left: 8%;
+  color: #dee2e6;
+  width: 279px;
+  height: 137px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.logo-sec{
+  position: absolute;
+  width: 130px;
+  top: 37%;
+  left: 46%;
+}
+.middle-sec{
+  position: absolute;
+  width: 530px;
+  top: 37%;
+  left: 32%;
+  color: white;
+  text-shadow: 0px 2px 41px #0843d1;
+}
+
+
+  /* seventh Area  */
+
+#seventh-sec{
+  position: absolute;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: url('../images_prov/home-6.png');
+  background-size: cover;
+  top: 300%;
+  width: 100%;
+  height: 50%;
+  border-bottom: 2px solid black;
+}
+
+
+
+.seventh-title{
+  position: relative;
+  width: 620px;
+  height: 115px;
+  margin-top: 5%;
+  margin-left: 28%;
+  text-align: center;
+}
+.seventh-title h3{
+  color: white;
+  font-size: 35px;
+  font-weight: 890;
+  font-family: 'VBG';
+  text-shadow: 0px 2px 46px silver;
+}
+
+.seventh-desc{
+  position: relative;
+  color: white;
+  width: 510px;
+  height: 115px;
+  margin-top: 0%;
+  margin-left: 33%;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
+  /* eighth Area  */
+
+#eigth-sec{
+  position: absolute;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: url('../images_prov/home-003.jpg');
+  background-size: 100% 100%;
+  top: 300%;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid black;
+}
+
+.eigth-title{
+  position: relative;
+  width: 620px;
+  height: 115px;
+  margin-top: 12%;
+  margin-left: 50%;
+  text-align: center;
+}
+.eigth-title h3{
+  color: white;
+  font-size: 45px;
+  font-weight: 890;
+  font-family: 'VBG';
+  text-shadow: 0px 2px 46px silver;
+}
+
+.eigth-desc{
+  position: relative;
+  color: white;
+  width: 510px;
+  height: 115px;
+  margin-top: 0%;
+  margin-left: 54%;
+  text-align: center;
+  font-size: 19px;
+}
+
+
+
+.scroll{
+  position: absolute;
+  width: 90px;
+  top: 80%;
+  left: 45%;
+}
+
+
+/*  fourth sec */
+
+#fourth-sec{
+  position: absolute;
+  overflow: hidden;
+  background-image: url('../images_prov/home-0.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  top: 400%;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid black;
+}
+
+.bar-fourth{
+  position: absolute;
+  left:22%;
+  top: 1%;
+}
+
+
+#bottom-sec{
+  position: absolute;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: url('../images_prov/home-bottom.png');
+  background-size: cover;
+  background-attachment: fixed;
+  top: 550%;
+  width: 100%;
+  height: 60%;
+}
+
+.bottom-key{
+  text-align: center;
+  padding-top: 70px;
+  font-size: 45px;
+  font-family: 'VBG';
+  color: white;
+}
+
+.subscribe{
+  position: relative;
+  background: url('../images_prov/email-background.png') no-repeat;
+  color: white;
+  width: 49%;
+  height: 100px;
+  top: 10%;
+  left: 23%;  
+}
+.zone-text{
+  position: absolute;
+  border: none;
+  top: 40%;
+  left: 37%;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+}
+
+/* foooter section  *************************** */
+
+
+#footer-sec{
+  position: absolute;
+  overflow: hidden;
+  background: url('../images_prov/footer-0.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 610%;
+  width: 100%;
+  height: 20%;
+  border-top: 1px solid black;
+}
+#footer-sec span{
+  padding-right: 5px;
+  padding-left: 5px;
+  z-index: 1000;
+}
+
+.logo-footer{
+  cursor: pointer;
+}
+.logo-footer:hover{
+  transform: scale(1.1);
+}
+
+.privacy, .terms, .notice{
+  cursor: pointer;
+  color: white;
+}
+
+.privacy:hover{
+  color: #c7a002;
+}
+.terms:hover{
+  color: #c7a002;
+}
+.notice:hover{
+  color: #c7a002;
+}
+
+.facebook-logo{
+  position: relative;
+  top: -20%;
+  left: 50%;
+  cursor: pointer;
+}
+.facebook-logo:hover{
+  transform:scale(1.1);
+}
+
+.twitter-logo{
+  position: relative;
+  top: -20%;
+  left: 50%;  
+  cursor: pointer;
+}
+.twitter-logo:hover{
+  transform:scale(1.1);
+}
+
+.contact{
+  position: absolute;
+  left: 82%;
+  top: 17%;
+  cursor: pointer;  
+}
+.contact:hover{
+  transform:scale(1.1);  
+}
+
+/*  neroo section  ******************/
+
+#nero-sec{
+  position: absolute;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: url('../images_prov/home-7.png');
+  background-size: 100% 100%;
+  top: 500%;
+  width: 100%;
+  height: 50%;
+  border-bottom: 2px solid black;  
+}
+
+.nero-title{
+  position: relative;
+  width: 620px;
+  height: 115px;
+  margin-top: 5%;
+  margin-left: 25%;
+  text-align: center;
+}
+.nero-title h3{
+  color: white;
+  font-size: 35px;
+  font-weight: 890;
+  font-family: 'VBG';
+  text-shadow: 0px 2px 46px silver;
+}
+
+.nero-desc{
+  position: relative;
+  color: white;
+  width: 510px;
+  height: 115px;
+  margin-top: 0%;
+  margin-left: 30%;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+.dust-is{
+  position: absolute;
+  top: 544%;
+  left: 33%;
+  z-index: 100;
+}
+
+
+
+.feedbacks{
+  position: absolute;
+  top: 18%;
+  left: 77%;
+  z-index: 1000;
+  cursor: pointer;
+  width: 180px;
+}
+
+.container-feeds{
+  top: 10%;
+  position: relative;
+  left: 22%;
+  height: 50%;
+  width: 50%;
+  overflow: auto;
+  background: rgba(255,255,255,0.9);
+  border-radius: 5px;
+}
+
+#feedbacks_list{
+  color: white;
+  height: auto;
+  width: auto;
+  margin-left: 40px;
+  margin-top: 3px;
+}
+
+
+  /*  **************  feeback section  ************* */
+
+#feedback_sec{
+  position: absolute;
+  overflow: hidden;
+  background: url('../images_prov/feedback-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 610%;
+  width: 100%;
+  height: 80%;
+  border-top: 1px solid black;
+  display: none;
+}
+
+
+.pseudo{
+  position: relative;
+  padding-top: 7%;
+  color: white;
+  padding-left: 15%;
+}
+
+.comment{
+  position: relative;
+  padding-top: 0;
+  color: white;
+  padding-left: 15%;
+}
+
+#comment-feedb{
+  position: relative;
+  margin-left: 18%;
+}
+
+.feed-display{
+  position: relative;
+  font-size: 20px;
+  color: silver;
+  cursor: pointer;
+  float: right;
+  margin-right: 1%;
+}
+
+
+/**************************   POP UP ENTRY PAGE  ****************************/
+
+#Main-PopUp{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-left: 0;
+  z-index: 999999;
+}
+
+#Main-PopUp-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+
+#Main-PopUp-main{
+  position: relative;
+  width: 50%;
+  height: 60%;
+  top: 20%;
+  margin : auto; 
+  background: url('../images_perso/Flyer.jpg'); 
+  background-size: 100% 100%;
+  border-radius: 15px;
+  z-index: 1; 
+  box-shadow: 5px 5px 5px rgba(64,255,149,0.6);
+}
+.Main-PopUp-img{
+  position: relative;
+  float: right;
+  top: 10%;
+  width: 50%;
+  height: 50%;
+  z-index: 1;
+}
+.Main-PopUp-joinUs{
+  position: relative;
+  transform : translate(360%, 250%);
+  width: 20%;
+  height: 20%;
+  cursor: pointer;
+}
+.Main-PopUp-connect{
+  position: relative;
+  float: right;
+  transform : translate(248%, 860%);
+  width: 20%;
+  height: 10%;
+  cursor: pointer;  
+}
+
+
+
+/*  close icon */
+.closeIcon{
+  position: absolute;
+  right: 0;
+  top: 0.6%;
+  cursor: pointer;
+}
+
+/* icone in Pop Up */
+.ico{
+  width: 22px;
+  height: 22px;
+} 
+/* ------------------------------  sign Up / Sign In pages ------------------------------- */ 
+
+
+
+/**********************   login pop  ****************************/
+
+#login-PopUp{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  top: 0;
+  margin-left: 0;
+  display: none;
+}
+
+#login-PopUp-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+
+#login-PopUp-main{
+  position: relative;
+  width: 30%;
+  height: 60%;
+  top: 25%;
+  margin : auto; 
+  background: white;
+  background-size: 100% 100%;
+  border-radius: 15px;
+  z-index: 1; 
+  box-shadow: 5px 5px 5px rgba(18,70,15,0.6);
+  display: none;
+}
+
+/*  close icon */
+.closeIcon{
+  position: absolute;
+  right: 0;
+  top: 0.6%;
+  cursor: pointer;
+}
+
+.logo-login{
+  position: relative;
+  padding:1% 27%;
+}
+
+.logo-login-ico{
+  position: relative;
+  transform : translate(-10% -10%);
+}
+
+/**********************   signUp pop  ****************************/
+
+#signUp-PopUp{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  top: 0;
+  margin-left: 0;
+  display: none;
+}
+
+#signUp-PopUp-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+
+#signUp-PopUp-main{
+  position: relative;
+  width: 30%;
+  height: 60%;
+  top: 25%;
+  margin : auto; 
+  background: white;
+  background-size: 100% 100%;
+  border-radius: 15px;
+  z-index: 1; 
+  box-shadow: 5px 5px 5px rgba(18,70,15,0.6);
+  display: none;
+}
+
+/*  close icon */
+.closeIcon{
+  position: absolute;
+  right: 0;
+  top: 0.6%;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------  */
+
+
+/**********************   game pop  ****************************/
+
+#game-PopUp{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  top: 0;
+  margin-left: 0;
+  display: none;
+}
+
+#game-PopUp-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+
+#game-PopUp-main{
+  position: relative;
+  width: 30%;
+  height: 70%;
+  top: 20%;
+  margin : auto; 
+  background: white;
+  background-size: 100% 100%;
+  border-radius: 15px;
+  z-index: 1; 
+  box-shadow: 5px 5px 5px rgba(18,70,15,0.6);
+  display: none;
+}
+
+/*  close icon */
+.closeIcon{
+  position: absolute;
+  right: 0;
+  top: 0.6%;
+  cursor: pointer;
+}
+
+
+.sorry{
+  position: relative;
+  width: 100%;
+}
+
+#game-PopUp-main .text{
+  font-size: 15px;
+  text-align: center;
+  color: #8a038f;
+}
+
+
+
+/**********************   social pop  ****************************/
+
+#social-PopUp{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  top: 0;
+  margin-left: 0;
+  display: none;
+}
+
+#social-PopUp-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+
+#social-PopUp-main{
+  position: relative;
+  width: 30%;
+  height: 70%;
+  top: 20%;
+  margin : auto; 
+  background: white;
+  background-size: 100% 100%;
+  border-radius: 15px;
+  z-index: 1; 
+  box-shadow: 5px 5px 5px rgba(18,70,15,0.6);
+  display: none;
+}
+
+/*  close icon */
+.closeIcon{
+  position: absolute;
+  right: 0;
+  top: 0.6%;
+  cursor: pointer;
+}
+
+
+.sorry{
+  position: relative;
+  width: 100%;
+}
+
+#social-PopUp-main .text{
+  font-size: 15px;
+  text-align: center;
+  color: #8a038f;
+}
+
+
+
+
+/**********************   subscrib message pop  ****************************/
+
+.message_sub{
+  position: relative;
+  color: red;
+  top: 10%;
+}
+
+/* *********************************************** Animation   **************************************************  */
+
+
+/*  ---------------------------------------------------   */
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+/*  ----------------------------------------  */

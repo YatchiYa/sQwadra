@@ -1,0 +1,1521 @@
+	/* body image blured */
+body{
+	background: url('../images/fond.png') fixed no-repeat;
+	background-size: cover;
+  margin: 0;
+  overflow: hidden;
+}
+
+ /* Font Define */
+@font-face{
+
+  font-family: 'SF';
+
+  src: url('../polices/Mon Cherry Personal Use.ttf');
+  src: url('../polices/Mon Cherry Personal Use.ttf') format('truetype');
+}
+
+@font-face{
+
+  font-family: 'LDPU';
+
+  src: url('../polices/Lovely Day Personal Use.ttf');
+  src: url('../polices/Lovely Day Personal Use.ttf') format('truetype');
+}
+
+
+	/*  delimited box for our template */
+#Grow_playground{
+  box-sizing: border-box;
+  background: none;
+  width: 1124px;
+  height: 630px; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+/*  logout logo   */
+.logout{
+  position: absolute;
+  z-index: 10000;
+}
+
+
+	/* the side-bar sizer */
+#sideBar{
+  width: 22.8%;
+  height: 100%;
+  float: left;
+  background-color: white;
+}
+
+/*  set the different boxes  */
+
+#container{
+  width: 70%;
+  height: 100%;
+  box-sizing: border-box;
+  float: right;
+}
+
+#skills,#habits,#ToDos,#Calendar{
+  width: 47%;
+  height: 49%;
+  float:left;
+  margin-bottom: 13px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+  display: inline-box;
+  background: white;
+}
+
+#habits{
+  background-image: url('../images/border1.03.png');
+  background-size: 100% 100%;
+}
+#skills{
+  background-image: url('../images/border1.04.png');
+  background-size: 100% 100%;
+}
+#Calendar{
+  background-image: url('../images/border1.05.png');
+  background-size: 100% 100%;
+}
+
+
+/*  *********  Header-list        ***********   */
+
+#ToDos{
+	background-image: url('../images/border1.02.png');
+  background-size: 100% 100%;
+}
+
+.header-list{ 
+  position: absolute;
+  transform:translate(140%,80%);
+  font-size: 15px;
+  color: rgb(24,255,0);
+  font-family: 'LDPU';
+}
+
+#general-task{
+  position: relative;
+  padding-top: 15%;
+  font-size: 10px;
+}
+
+#input-task{
+  position: relative;
+  text-align: center;
+}
+
+.todo-list{
+  padding-top: 5%;
+  padding-right: 10%;
+  font-size: 10px;
+  height: 188px;
+  overflow: auto;
+}
+
+.todo-task{
+  list-style: none;
+  padding-right: 2%;
+  margin-bottom: 2%;
+  width:100%;
+  height: 50px;
+  margin-right: 15px;
+  background: url('../images/fill.png') no-repeat;
+  background-size: 100% 100%;
+  border : 1px solid green;
+  box-shadow: 0 2px 0 green;
+}
+
+.toggle{
+  transform:translate(57%,110%);
+  font-size: 15px;
+}
+
+/* delete icon  */
+.delete{
+  position: relative;
+  cursor: pointer;
+  float: right;
+  font-size: 10px;
+  margin-top: -15px;
+  color: red;
+}
+
+/* delete systeme from js */
+.removing{
+  display: none;
+}
+
+/*  complete task */
+.done{
+  display: none;
+}
+
+
+.editItem{
+  position: relative;
+  cursor: pointer;
+  float: right;
+  font-size: 10px;
+  padding-top: 4px;
+  color: green;
+
+}
+
+.todo-task-li{
+  position: relative;
+  padding-left: 14px;
+  font-size: 10px;
+}
+
+.calendarItem{
+  position: absolute;
+  font-size: 14px;
+  transform: translate(350%,75%);
+  color: #848484;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.calendarDeadline{
+  position: absolute;
+  font-size: 9px;
+  width: 100px;
+  padding-left: 3px;  
+}
+
+.setDeadline{
+  font-size: 9px;
+  position: absolute;
+  margin-left: 36px;
+}
+
+/*  display the calendar */
+#ui-datepicker-div{
+  background: black;
+}
+#ui-datepicker-div td{
+  padding-left: 15px;
+}
+.ui-datepicker-next{
+  float: right;
+  cursor: pointer;
+}
+.ui-datepicker-title{
+  text-align: center;
+  cursor: pointer;
+}
+.TheDeadLine{
+  position: relative;
+  left: 160px;
+  margin-top: 15px;
+  font-size: 8px;
+}
+
+.dust-award{
+  position: absolute;
+  z-index: 100;
+  width: 45px;
+  left: 45%;
+  transform: translate(-5%,-46%);
+ opacity: 0;
+}
+
+/* the annimation of showing the dust Reward */
+@-webkit-keyframes prize {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-5%, -60%);
+            transform: translate(-5%, -60%);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translate(-5%, -70%);
+            transform: translate(-5%, -70%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-5%, -200%);
+            transform: translate(-5%, -200%);
+  }
+}
+ 
+@keyframes prize {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-5%, -60%);
+            transform: translate(-5%, -60%);
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translate(-5%, -70%);
+            transform: translate(-5%, -70%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-5%, -200%);
+            transform: translate(-5%, -200%);
+  }
+}
+
+
+
+/* the differrent frame in the main box */
+.link-boxes{
+  position: absolute;
+  transform:translate(182%,160%);
+  z-index: -1;
+}
+.link-boxes1{
+
+  position: absolute;
+  transform:translate(182%,1410%);
+  z-index: -1;
+}
+.link-boxes2{
+
+  position: absolute;
+  transform:translate(515%,14%);
+  z-index: -1;
+}
+.link-boxes3{
+
+  position: absolute;
+  transform:translate(515%,1630%);
+  z-index: -1;
+}
+
+/*  General Todos  All  */
+
+#all-Todos{
+  position: absolute;
+	height: 400px;
+	width: 300px;
+	background-size: 100% 100%;
+	background-color: rgba(57, 216, 115, 0.86);
+	left: 63%;
+	top: 20%;
+	border-radius: 10px;
+	box-shadow: -3px 3px 6px #eeeeee;
+	z-index: 1000;
+	border: 5px groove greenyellow;
+}
+.all-Todos-title{
+  margin-top: 10px;
+  font-size: 11px;
+  text-align: center;
+  color: #590050;
+}
+
+.img-all{
+  position: relative;
+  transform:translate(-55%,-35%);
+  cursor: pointer;
+  float: right;
+}
+.closeIcon-all{
+  position: relative;
+  float: right;
+  width: 11px;
+  cursor: pointer;
+  top : 1px;
+}
+
+
+
+
+/*  -------------  the different field   -------------------*/
+
+/* all there is todo */
+#all_there_is{
+  position: relative;
+  width: 82%;
+  height: 100px;
+  margin-left: 27px;
+  overflow: auto;
+}
+
+
+
+#blocks{
+  width: 94%;
+  height: 250px;
+  overflow: auto;
+  position: relative;
+  margin-left: 10px;
+  margin-top: 0;;
+}
+
+
+
+/* ----------------field title -------------------*/
+#title-IU,#title-I,#title-U,#title-NIU,#title-A{  
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: center;
+}
+
+/* ---------------------cursor hover title ------------------------ */
+#title-IU,#title-I,#title-U,#title-NIU,#title-A:hover{
+  font-size: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*  ------------------block tasks-------------------------- */
+#important_urgent-task,#important-task,#urgent-task,#not_important-urgent-task{
+  position: relative;
+  margin-top: 5px;
+  height: 70px;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  display: none;    
+}
+
+/*  make the boxe of title small */
+#Important_urgent h1, #important h1, #urgent h1, #not_important-urgent h1{
+  margin-top: 4px;
+  margin-bottom: 6px;
+  font-size: 9px;
+}
+
+
+#important_urgent-task ul,#important-task ul,#urgent-task ul,#not_important-urgent-task ul{
+  display: block;
+  background-image: url('../images/fill.png');
+  padding: 10px 0px 10px 0px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin: 0 7px;
+  box-shadow: 2px 2px 0px black;
+}
+
+
+/*  ------------------important & urgent ----------------------------- */
+#title-IU{
+  border-bottom: 1px solid red;
+}
+
+#Important_urgent h1{
+  color: red;
+}
+
+#title-IU:hover{
+  background-color: rgba(255,4,4,0.3);
+  cursor: pointer;
+}
+
+
+
+
+/*  ------------------- important --------------------------*/
+#title-I{
+  border-bottom: 1px solid brown;
+}
+
+#important h1{
+  color: brown;
+}
+
+#title-I:hover{
+  background-color: rgba(211,100,67,0.4);
+  cursor: pointer;
+}
+
+
+
+/* -----------------------urgent ------------------------- */
+#title-U{
+  border-bottom: 1px solid green;
+}
+#urgent h1{
+  color: green;
+}
+
+#title-U:hover{
+  background-color: rgba(143,237,126,0.4);
+  cursor: pointer;
+}
+
+
+
+
+
+/*  -------------------------- not important & not urgent ---------------------------- */
+#title-NIU{
+  border-bottom: 1px solid #03327f;
+}
+#not_important-urgent h1{
+  color: #03327f;
+}
+
+#title-NIU:hover{
+  background-color: rgba(69,222,239,0.4);
+  cursor: pointer;
+}
+
+/* space in the end to show the box */
+#not_important-urgent{
+  margin-bottom: 10px;
+}
+
+
+
+/* ****************************** costume Menu Edit/Remove *************************  */
+
+
+
+/*   costume menu */ 
+.custom-menu{
+  position: absolute;
+  width: 100px;
+  background: rgba(255,255,255,0.7);
+  border : 1px solid black;
+  z-index: 10000;
+  border-radius: 5px;
+  padding: 0;
+  transition: all .3s ease;
+}
+
+.custom-menu li{
+  list-style: none;
+  color: black;
+  font-size: 11px;
+  cursor: pointer;
+  padding : 2px 12px;
+  transition: all .3s ease;
+}
+
+#remove-Menu{
+  color: red;
+}
+
+
+
+
+/*  ******************* Modal Edit Tool  *************************** */ 
+
+
+/*  modal box */
+#modal-ToDos{
+  width: 67%;
+  height: 99%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  margin-left: 0px;
+  z-index: 10000;
+  display: none;
+}
+
+/*  modal bg after click*/
+.modal_ToDos-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+/* modal when it clicked */
+.modal_ToDos-List{
+  position: relative;
+  width: 50%;
+  height: 94%;
+  top: 3%;
+  margin : auto; 
+  background : white;
+  border: 1px solid black;
+  border-radius: 15px;
+  z-index: 1;
+  box-shadow: 5px 5px 5px rgba(99,78,18);
+  display: none;
+}
+
+
+/*  close icon */
+.CloseIcon, .closeIcon{
+  position: absolute;
+  right: 3%;
+  top: 0.6%;
+  cursor: pointer;
+}
+
+
+/* our modal */
+
+/*  modal fisrt part the orange one */
+#modal-first_part{
+  background: rgba(255,141,28,0.9);
+  border: 1px solid orange;
+  border-top-right-radius: 15px; 
+  border-top-left-radius: 15px; 
+  height: 45%;
+  width: 100%;
+}
+
+/*  title and button*/
+.head{
+  display: flex;
+  justify-content:space-between;
+}
+
+
+/* title */
+
+.modal-t{
+  position: relative;
+  color: white;
+  padding-left: 15px;
+  font-size: 26px;
+  padding-top: 6px;
+}
+ /*  button */
+.btn-cancel-save{
+  float: right;
+  margin-right: 8px;
+  margin-top: 2px;
+  border-radius: 10px;
+}
+
+
+.success{
+  position: relative;
+  font-size: 15px;
+  margin-right: 8px;
+  margin-top: 30px;
+  border-radius: 7px;
+  background: green;
+  color: white;
+  cursor: pointer;
+  transform: translate(0%,-80%);
+}
+.failled{
+  position: relative;
+  font-size: 11px;
+  margin-right: 8px;
+  margin-top: 30px;
+  border-radius: 7px;
+  background: red;
+  color: white;
+  left: 61px;
+  cursor: pointer;
+  transform: translate(0%,-80%);
+}
+
+/* color of the title and notes */
+.modal-title,.modal-textarea{
+  position: relative;
+  color: white;
+  padding-left: 30px;
+  font-size: 17px;
+}
+
+/*  area field */
+.modal-title-field,.modal-note{
+  position: relative;
+  border-radius: 5px;
+  margin-left: 30px;
+  background: rgba(158,155,150,0.5);
+  border: none;
+  color: white;
+}
+
+.modal-title-field{
+  font-size: 13px;
+}
+.modal-note{
+  font-size: 13px;
+}
+
+/* checklist in modal */
+#checklist .title-checklist{
+  position: relative;
+  color: black;
+  padding-top: 10px;
+  margin-left: 30px;
+  font-size: 17px;
+}
+
+/* button plus in checklist*/
+.glyphicon .plus{
+  position: relative;
+  top: 8px;
+}
+.plus{
+  color: green;
+  font-size: 15px;
+}
+/* the border checklist */
+#checklist-fomulaire{
+  border-top: 0.5px solid rgba(152,175,177);
+  border-bottom: 0.5px solid rgba(152,175,177); 
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* no border in checklist*/
+#input-checklist{
+  border: none;
+  font-size: 10px;
+}
+
+.difficulty{
+  position: relative;
+  color: black;
+  padding-top: 10px;
+  margin-left: 30px;
+  font-size: 17px;  
+}
+
+/* rating stars */
+.rating-difficulty{
+  display: flex;
+  justify-content:space-around;
+}
+
+.rating-difficulty span{
+  margin-top: 29px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* first span */
+.star0{
+  padding-top: 18px;
+  font-size: 15px;
+}
+
+.star0:hover{
+  color:rgba(255,128,0);
+}
+
+/* second span */
+.star1{
+  padding-top: 18px;
+  padding-right: 22px;
+  font-size: 15px;
+} 
+
+.star2{
+  padding-top: 6px;
+  padding-left: 30px;
+  font-size: 15px;
+  transform: translate(0%,-100%);
+}
+
+.star1:hover{
+  color:rgba(255,128,0);  
+}
+/* third span */
+.star3{
+  padding-top: 10px;
+  padding-right: 22px;
+  font-size: 15px;
+
+}
+.star4{
+  padding-top: 5px;
+  padding-left: 35px;
+  font-size: 15px;
+  transform: translate(0%,-100%);
+}
+
+.star5{
+  padding-top: 18px;
+  font-size: 15px;
+  transform: translate(0%,-240%);
+  padding-left: 10px;
+}
+
+.star3:hover{
+  color:rgba(255,128,0);
+}
+
+
+.name-rating-difficulty{
+  margin-top: 8px;
+  display: flex;
+  justify-content:space-around;
+}
+
+.name-rating-difficulty p{
+  font-size: 14px;
+  text-align: center;
+}
+
+#edit-ToDos-delete{
+  position: relative;
+  top: 6%;
+  left: 32%;
+  color: red;
+  cursor: pointer;
+}
+
+
+.editText{
+  display: none;
+  margin-left: 13px;
+}
+/* save button */
+li .saveItem{
+  display: none;
+  font-size: 10px;
+}
+/* cancel button */
+li .cancelItem{
+  display: none;
+  font-size: 10px;
+}
+
+
+
+/*  the different locks !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.lockS{
+  position: absolute;
+  height: 49%;
+  width: 33%;
+  z-index: 100;
+}
+.lockS-bg{
+  position: absolute;
+  height: 49%;
+  width: 33%;
+  z-index: 10;
+  background: rgba(0,0,0,0.9);
+}
+
+.lockC{
+  position: absolute;
+  height: 49%;
+  width: 33%;
+  z-index: 100;
+}
+.lockC-bg{
+  position: absolute;
+  height: 49%;
+  width: 33%;
+  z-index: 10;
+  background: rgba(0,0,0,0.9);
+}
+
+
+
+#all-Todos_fd{
+
+  position: relative;
+  height: 400px;
+  width: 300px;
+  background-size: 100% 100%;
+  background-color: rgba(57, 216, 115, 0.86);
+  left: 63%;
+  top: 20%;
+  border-radius: 10px;
+  box-shadow: -3px 3px 6px #eeeeee;
+  z-index: 1000;
+  border: 5px groove greenyellow;
+}
+
+
+
+
+
+
+/*   -------------------------------------------- Animation  *********************************************************  */
+
+/*  canvas animation */
+  canvas{
+    display:inline-block;
+  }
+  body{
+    margin:0;
+  }
+/* Header */
+.large-header {
+  position: relative;
+  width: 100%;
+  background: #333;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+}
+
+
+.demo-2 .large-header {
+  background-image: url('../images_perso/demo-2-bg.jpg');
+  background-position: center bottom;
+}
+
+
+
+
+
+
+/* ***************************************** SideBar   ******************************************************* */
+
+  /* SIDEBAR FUNCTIONS (MIGRATE TO SIDEBAR.VUE) */
+
+.sideBar{
+  width: 256px;
+  height: 100%;
+  border-right: 1px solid black;
+  float: left;
+  background-color: white;
+}
+
+.avatarContainer {
+  height: 192px;
+  width: 255px;
+  background-color: #A3320B;
+  -webkit-transition: background-image 0.5s;
+  -moz-transition: background-image 0.5s;
+  -ms-transition: background-image 0.5s;
+  -o-transition: background-image 0.5s;
+  transition: background-image 0.5s;
+  position: absolute;
+  border-bottom: 1px solid gray;
+  /* Keeps Avatar Image in the foreground */
+  z-index: 9;
+  
+}
+
+.avatarContainerPosition {
+  height: 192px;
+  width: 255px;
+}
+
+.avatarContainerBackgroundDiv {
+  position: absolute; 
+  top: 0px;
+  left: 0px;
+  
+}
+
+.avatarContainerBackground {
+  margin-left: 84px;
+  margin-top: 96px;
+  z-index: 10;
+}
+
+.avatarImage {
+  width: 48px; /*width changed from 36 to 48! */
+  transform: translate(100%, 60%);
+  border-radius: 25%;
+  position: relative;
+  left: 71px;
+  top: -5px;
+}
+
+.sideBarPet {
+  position: relative;
+  left: 30px;
+  top: 60px;  
+  
+}
+
+.avatarThoughtBubbleContainer {
+  position: absolute;
+  left: 160px;
+  top: -20px;
+  text-align: center;
+  
+}
+
+.avatarThoughtBubble {
+  position: absolute;
+  width: 100px;
+  cursor: pointer;
+}
+
+.avatarThought {
+  width: 30px;
+  position: absolute;
+  left: 38px;
+  top: 14px;
+  border-radius: 20px;
+}
+
+.avatarThoughtText {
+  position: absolute; 
+  width: 50px;
+  left: 30px;
+  top: 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.experienceContainer {
+  width: 256px;
+  height: 35px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.experienceBar {
+  height: 31px;
+  margin: 2px 0 1px 0;
+  width: 220px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  float: left;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.experienceSpanOne {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgb(238,225,66);
+  background-image: linear-gradient( center bottom, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%);
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+  /* transition: all 800ms; */
+}
+
+.levelContainer {
+  width: 36px;
+  height: 35px;
+  box-sizing: border-box;
+  float: right;
+  text-align: center;
+  border-right: 1px solid black;
+}
+
+.level {
+  line-height: 15px;
+  border: 2px double black;
+  cursor: pointer;
+  color: white;
+  background-color: gray;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  left: 226px;
+  top: 200px;
+
+}
+
+.vaultContainer {
+  height: 100px;
+  width: 256px;
+  box-sizing: border-box;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.goldContainer {
+  height: 100px;
+  width: 180px;
+  box-sizing: border-box;
+  border-right: 1px solid black;
+  float: left;
+  line-height: 100px;
+  text-align: center;
+}
+
+.goldImage {
+  height: 98px;
+  width: 178px;
+}
+
+.marketContainer {
+  height: 98px;
+  width: 76px;
+  box-sizing: border-box;
+  background-color: white;
+  float: left;
+  border-right: 1px solid black;
+}
+
+.marketImageContainer {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px 0 0 5px;
+  margin: 20px 8px 20px 8px;
+  border: 1px solid black;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+
+.marketImage {
+  width: 60px;
+  height: 50px;
+  border-radius: 5px 0 0 5px;
+}
+
+.marketImageText {
+  line-height: 10px;
+  color: black;
+  position: relative;
+  top: -13px;
+  font-size: 10px;
+}
+
+.buyApproval {
+  position: absolute;
+  top: 283px;
+  left: 248px;
+  width: 0;
+  height: 62px;
+  padding-top: 5px;
+  border-radius: 0 10px 10px 0;
+  box-sizing: border-box;
+  background-color: white;
+  font-size: 10px;
+  line-height: 19px;
+  text-align: center;
+  z-index: 99;
+  transition: all 400ms;
+}
+
+.buyButtonYes,
+.buyButtonNo {
+  cursor: pointer;
+  display: none;
+}
+
+.buyButtonYes {
+  color: green;
+  display: none;
+}
+
+.buyButtonNo {
+  color: red;
+  margin-top: 10px;
+}
+
+/* END OF SIDEBAR FUNCTIONS */
+
+
+
+
+/*    Console   */
+.consoleButton {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 1px solid black;
+  color: white;
+  line-height: 40px;  
+}
+
+
+
+
+/* ************************************* Calendar   ***********************************************************  */
+
+.cal_calendrier
+{
+    border:1px solid black;
+    box-sizing: border-box;
+    padding:1px;
+    background-color:#4594ff;
+    width:256px;
+    margin:auto;
+    height:256px;
+    background-color : white;
+}
+.cal_calendrier th
+{
+    border:1px solid white;
+    background-color:#ffffff;
+}
+.cal_calendrier td
+{
+    border:1px solid black;
+    background-color:#ffffff;
+    text-align:center;
+    border-top: 1px solid green;
+    
+}
+
+
+#notes {
+
+    position:absolute;
+    border:1px solid black;
+    background-color: lightskyblue;
+    right: 261px;
+    height:176px;
+    width: 244px;
+    top:41px;
+
+}
+#fenetre{
+    font-size: 9px;
+
+}
+
+
+
+
+
+/*        ***************************************************** SKILL's  To Check  ******************************************  */
+
+#skills h2{
+  color: #00FFFF;
+  text-align: center;
+  font-family: phosphate;
+  font-size: 220%;
+
+}
+
+#skills .Menu nav{
+  width: :40%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+
+
+}
+  
+#skills a{
+  font-family: phosphate;
+  border:2px double black; /* pour les bordures du menu */
+}
+
+#skills .addmenu a{
+
+  
+  /*text-shadow: black 3px 2px, white 2px 1px, #000000 -1px -1px, #000000 1px -1px;*/
+
+
+}
+
+
+
+#skills .Menu ul::after{
+  content: "";
+  display: block;
+  clear:both;
+} 
+
+
+
+
+#skills .Menu nav > ul
+{
+  margin:0px;
+  padding: 0px;
+}
+
+
+
+#skills .Menu ul > li
+{
+  float:left;
+  position: relative;
+}
+
+
+#skills .Menu ul > li > a {
+  padding: 20px 30px;
+  color:black;
+}
+
+#skills .Menu ul >li:hover a {
+  padding: 15px 30px 20px 30px;
+}
+
+#skills .Menu li {
+  list-style-type: none;
+  color: black;
+}
+
+
+
+#skills .addmenu{
+  display: none;
+
+
+}
+
+#skills .Menu a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+#skills .Menu li:hover .addmenu{
+  display: inline-block;
+  position: absolute;;
+  top: 100%;
+  left: 0px;
+  padding: 0px;
+  z-index: 1000;
+}
+
+
+.addmenu li a{
+  padding: 5px 10px;
+  font-size: 13px;
+  width: 60px;
+  color: black;
+}
+
+#skills .menu-add::hover{
+ border-top: 5px solid #FFF;
+ background-color: white;
+ 
+}
+
+.menu-add .addmenu{
+  background-color: pink;
+  border:1px solid black;
+}
+
+.Skillbox
+{
+  box-sizing: border-box;
+  width: 100%;
+  margin: 20px 0;
+    text-align: right; 
+}
+
+
+
+.Skillbox p
+{
+  color: black;
+  margin: 0 0 10px;
+  padding: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: phosphate;
+}
+
+.Skillbox p:nth-child(2){
+  float: right;
+  position: relative;
+  top: -30px;
+}
+
+.skill_progress1 
+{
+  background: white;
+  padding: 4px;
+  box-sizing: border-box;
+  border:1px solid black;
+  border-radius: 2px;
+}
+
+.skill_progress1 p{
+  color: red;
+  margin: 0px ;
+}
+
+.barrecolor1 /* jauge */
+{
+ background: red;
+ width: 1%;
+ height:30px;
+}
+
+.skill_progress2 
+{
+  background: white;
+  padding: 4px;
+  box-sizing: border-box;
+  border:1px solid black;
+  border-radius: 2px;
+}
+
+.skill_progress2 p{
+  color: green;
+  margin: 0px ;
+}
+
+.barrecolor2 /* jauge */
+{
+ background: green;
+ width: 1%;
+ height:30px;
+}
+
+.skill_progress3
+{
+  background: white;
+  padding: 4px;
+  box-sizing: border-box;
+  border:1px solid black;
+  border-radius: 2px;
+}
+
+.skill_progress3 p{
+  color: yellow;
+  margin: 0px ;
+}
+
+.barrecolor3 /* jauge */
+{
+ background: yellow;
+ width: 1%;
+ height:30px;
+}
+
+
+.skill_progress4 
+{
+  background: white;
+  padding: 4px;
+  box-sizing: border-box;
+  border:1px solid black;
+  border-radius: 2px;
+}
+
+.skill_progress4 p{
+  color: brown;
+  margin: 0px ;
+}
+
+.barrecolor4 /* jauge */
+{
+ background: brown;
+ width: 1%;
+ height:30px;
+}
+
+.skill_progress5 
+{
+  background: white;
+  padding: 4px;
+  box-sizing: border-box;
+  border:1px solid black;
+  border-radius: 2px;
+}
+
+.skill_progress5 p{
+  color: blue;
+  margin: 0px ;
+}
+
+.barrecolor5 /* jauge */
+{
+ background: blue;
+ width: 1%;
+ height:30px;
+}
+
+
+
+
+/*  *********************************************** Dailies   ***********************************************  */
+
+.wrapp {
+  border-top: 0px;
+  margin: auto;
+  max-width: 800px;
+  width: 80%;
+}
+
+.principal {
+  padding: 0px 0;
+  width: 100%;
+  text-align: : center;
+  border-top: 0px;
+}
+.colormio {
+  color: inherit;
+  text-decoration: bold;
+text-shadow: 20px ;
+font-family: hobo std;
+text-align: center;
+margin-top: 20px;
+border-bottom: 5px;
+
+
+}
+.principal .formulario {
+  color: #212121;
+  text-align: center;
+}
+
+.principal .formulario input[type=text] {
+  margin-bottom: 5px;
+  padding: 8px;
+  width: 100%;
+}
+
+.principal .formulario input[type=text].error {
+  border: 3px solid #D32F2F;
+  color: red;
+}
+
+.principal .formulario .boton {
+  background-color: rgb(45, 41, 41) ;
+  border: 0.5px solid rgb(64, 13, 85);
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.principal .formulario .boton:hover {
+  border: 1px solid #fff;
+}
+
+/*/* - Tareas - */
+
+}
+
+.tareas  {
+background-color: none;
+}
+.tareas .lista {
+list-style: none;
+margin: 0px 0px 0px 0px;
+max-width: 800px;
+width: 89%;
+
+
+}
+
+.tareas .lista li {
+border-bottom: 1px solid #B6B6B6;
+
+}
+
+.tareas .lista li a {
+  color: white;
+  display: block;
+  padding: 10px 0px 10px 5px;
+  font-family: Chaparral Pro Light;
+  font-size: 1.3em;
+  margin-top: 5px;
+  background-color: rgb(45, 41, 41);
+  text-align:: left;
+}
+
+.tareas .lista li a:hover {
+  text-decoration: underline;
+
+}
+
+
+
+
+
