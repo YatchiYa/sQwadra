@@ -1,0 +1,411 @@
+<!--
+	  Grow-PlayGround Main page  
+		using : Html / Css / Javascript ( Javascript / jQuery / vueJs )  => for the front End 
+		
+
+
+ -->
+
+
+ <!doctype html>
+<html lang="en-EN">
+	<head>
+		<meta charset="UTF-8" >	
+		<!-- we set this for our first page : the main page : not the page where we have our boxes !! -->
+		<!--  the different css files -->
+		<link rel="stylesheet" type="text/css" href="../static/css/Grow-PlayGround-style.css"> 
+		<link rel="shortcut icon" type="image/X-icon" href="../static/images/icon.png">
+		<!-- seting the option : Compatibilities-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale = 1.0, width=device-width">	
+
+  	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	    <!--                       using the framework aos !!                               -->
+        <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+		
+
+
+
+
+   		<title>Home</title>
+  	</head>
+
+   	<body>
+   		<div class="scrollTop">
+   			<a href="#"><img src="../static/images_prov/GoTop.png" class="textToTop"></a>
+   			<a href="#"><img src="../static/images_prov/GoTop.gif" class="DragonTop"></a>
+   		</div>
+	    		<img src="../static/images_prov/dust-is.png" class="dust-is" data-aos="flip-down">	
+
+	    		<img src="../static/images_prov/recruit.png" class="we_recruit">
+
+				<!-- Audio Play  -->			
+	 <!--   <audio src="../static/multimedia/audio/audio-test.mp3" preload controls loop ></audio>	-->
+
+	    			<!-- End Audio -->
+
+	    			<!--  ********** First Section ************** -->
+	    			<div id="first-sec">
+	    				<!-- *******   The Menu Bar on Top ************ -->
+		    			<nav class="topMenu">
+		    				<ul class="Menu">
+		    					<li class="home"> Game </li>
+		    					<li class="blog"><a href="{{ url_for('story') }}"> Story </a></li>
+		    					<li class="about_us"><a href="{{ url_for('aboutus') }}"> About Us </a></li>
+		    					<li class="request_demo"> Social Media</li></a>
+		    					<li id="login_signup">
+		    						<div class="login-signup">
+				    					<span class="login"> Login </span>
+				    					<span> / </span>
+				    					<span class="signup"> SignUp </span>
+				    				</div>	
+			    				</li>
+		    				</ul>
+		    			</nav>
+		    			<!-- End Of The Menu Bar  -->
+		    				
+		    			<!-- The different Logo images on the first section -->
+		    			<img src="../static/images_perso/logo-testt.png" class="logo-test" data-aos="zoom-in">
+		    			<img src="../static/images_prov/role-playing.png" class="role-playing" data-aos="zoom-in">
+		    			<a href="{{ url_for('story') }}"><img src="../static/images_prov/learn-more.png" class="learn-logo" data-aos="zoom-in"></a>
+		    			<a href="#bottom-sec"><img src="../static/images_prov/for-Beta.png" class="for-beta" data-aos="zoom-in"></a>
+		    			<a href="#second-sec"><img src="../static/images_prov/scroll.gif" class="scroll" style="left: 50%; top: 87%;"></a>
+	    			</div>
+	    			<!-- ******************* End Of The First section *********************-->
+	    			
+	    			<!-- ********************* Second Section ******************* -->
+	    			<div id="second-sec">
+	    				<div class="secondo-title-1" data-aos="fade-right">
+	    					Be Ready !!
+	    				</div>
+	    				<div class="secondo-title-2" data-aos="fade-left">
+	    					Get Started !!
+	    				</div>
+	    				<div class="secondo-title-3" data-aos="fade-up">
+	    					Change Your Life !!
+	    				</div>
+	    				<div class="secondo-title-4" data-aos="fade-down-right">
+	    					
+	    				</div>
+	    				<a href="#third-sec"><img src="../static/images_prov/scroll.gif" class="scroll" style="left: 50%; top: 87%;"></a>
+	    			</div>
+	    			<!--******************** End Of The Second Section *******************-->
+
+	    			<!-- *************************** Third Section ********************** -->
+	    			<div id="third-sec">
+	    				<div class="third-title" data-aos="fade-right">
+	    					<h3> Our vision ?  </h3>
+	    				</div>
+	    				<div class="third-desc" data-aos="fade-right">
+	    						is to use games to increase the number of lives lived well. We want to achieve this by bringing people together, empowering them to have an open discussion and giving them the tools to make a change.  
+	    				</div>
+	    				<img class="third-img-frame" src="../static/images_prov/st.png" data-aos="fade-left">
+	    				<img class="third-img" src="../static/images_prov/dust-society.png" data-aos="fade-left"><a href="#eigth-sec"><img src="../static/images_prov/scroll.gif" class="scroll" style="left: 50%; top: 76%;"></a>
+	    			</div>
+	    			<!-- ******************** End Of The Third Section  ************************ -->
+
+	    			<!-- ******************* Fifth Section ********************* -->
+<!--	    			<div id="fifth-sec">
+	    				<div class="fifth-title" data-aos="fade-left">
+	    					<h3> the Dust Weaver Society was Born </h3>
+	    				</div>
+	    				<div class="fifth-desc" data-aos="fade-left">
+	    						Dust weavers became the protectors and teachers of society. On top of the battlefield, where humanity discovered its powers, they built the capital and created an academy to train people in the arts of dust weaving. <br> To travel fast and to have a way to protect the lands despite their small number they built a portal system that they connected to the academy 
+	    				</div>
+	    				<img class="fifth-img-frame" src="../static/images_prov/st.png" data-aos="fade-right">
+	    				<img class="fifth-img" src="../static/images_prov/dust-society.png" data-aos="fade-right">
+	    				<a href="#seventh-sec"><img src="../static/images_prov/scroll.gif" class="scroll" style="left: 50%; top: 76%;"></a>
+	    			</div>-->
+	    			<!-- **********************  End Of the fifth Section *********************** -->
+
+	    			<!--* ************************* Seventh Section ************************** -->
+<!--	    			<div id="seventh-sec">
+	    				<div class="seventh-title" data-aos="fade-down-left">
+	    					<h3> Revolution </h3>
+	    				</div>
+	    				<div class="seventh-desc" data-aos="zoom-out-up">
+	    					In the last hundred years Eon’s corrupting influence on the world increased, leading to greater and greater wars and rising anonymity and coldness. In response to that the “Engineers” have created a magical device that helps to consolidate dust and amplify the power of dust weavers. 
+	    				</div>
+	    			</div>-->
+	    			<!-- ****************** End Of The Seventh Section ************************ -->
+
+	    			<!-- ******************* Eigth Section *************************** -->
+	    			<div id="eigth-sec">
+	    				<div class="eigth-title" data-aos="zoom-in">
+	    					<h3>The framework behind Grow</h3>
+	    				</div>
+	    				<div class="eigth-desc" data-aos="zoom-in">
+	    					The framework behind Grow is a combination of positive psychology research, philosophy and game design. We combine these disciplines to you to reflect on the kind of person you want to become and then give you the tools to develop yourself in this direction.
+
+	    				</div>
+	    				<img class="fifth-img-frame" src="../static/images_prov/st.png" data-aos="fade-right">
+	    				<img class="fifth-img" src="../static/images_prov/grow-play.jpg" data-aos="fade-right">
+	    				<a href="#fourth-sec"><img src="../static/images_prov/scroll.gif" class="scroll" style="left: 50%; top: 85%;"></a>
+	    			</div>
+
+	    			<!-- ***********************End Of The Eigth Section  *****************-->
+
+	    			<!-- ************************** Fourth Section ***********************( still changing) -->
+	    			<div id="fourth-sec">
+	    				<!-- The small frame on top of the section -->
+	    				<img src="../static/images_prov/footer-0-bar.png" class="bar-fourth" data-aos="zoom-in">
+	    				<!-- The small image in the middle of the section -->
+	    				<!--<img src="../static/images_prov/logo-sec.png" class="logo-sec" data-aos="zoom-in">-->
+	    				<h2 class="middle-sec"  data-aos="zoom-in">&emsp;Become more and more powerful, <br>&emsp;&emsp;&emsp;&emsp; conquer new lands <br>&emsp; &amp; co-create the world of Elyrion</h2>
+
+	    				<!-- The different boxes representing the tool boxes -->
+	    				<div class="To-Do-list" data-aos="zoom-out-right">
+	    					<h3 style="padding-top: 100px; color:green; font-size:25px; text-shadow: 0px 2px 46px green;"> Connect to your cluster and a growing community in your area  </h3>
+		    		
+		    				<!--<div class="To-Do-List-desc">
+		    					Keep your tasks, lists and reminders in one place, always in-sync across all your devices
+		    				</div>-->
+	    				</div>
+
+	    				<div class="calendar" data-aos="zoom-out-left">
+		    					<h3 style="padding-top: 150px; padding-bottom: 25px; color: aqua; font-size: 25px; text-shadow: 0px 2px 46px #00fff6;"> Solve riddles and fight powerful foes together </h3>
+		    				
+		    				<!--<div class="calendar-desc">
+		    					Plan your day, week, month, and life. Beautifully designed to help you rock your day, everyday
+		    				</div>-->
+	    				</div>
+
+	    				<div class="Skill-List" data-aos="zoom-out-right">
+		    					<h3 style="padding-top: 150px; padding-bottom: 25px; color: red; font-size: 25px; text-shadow: 1px 2px 46px red;"> Unlock tools to build positive habits </h3>
+		    				
+		    				<!--<div class="Skill-desc">
+		    					Do your Tasks, Improve your Self, And Up your Skill's To Fight with the Dust Weaver team 
+		    				</div>-->
+	    				</div>
+
+	    				<div class="Daillies" data-aos="zoom-out-left">
+	    					<h3 style="padding-top: 100px; color: #ff00ea; font-size:25px; text-shadow: 0px 2px 46px #ed00fc;"> Start on your own hero’s journey and complete quests in your real life </h3>
+		    				
+		    				<!--<div class="Daillies-desc">
+		    					Bad Habits ? Good ones ? this is for you ! do your habits with the fantasiest schedule, with Us.
+		    				</div>-->
+	    				</div>
+	    				<a href="#nero-sec"><img src="../static/images_prov/scroll.gif" class="scroll" style="left: 50%; top: 87%;"></a>
+
+	    			</div>
+
+	    			<!-- *********************** The End of the fourth section *****************-->
+
+	    			<!-- ************************ The nero section ******************-->
+	    			<div id="nero-sec">
+	    				<div class="nero-title" data-aos="fade-in">
+	    					<h3>Your Turn !!</h3>
+	    				</div>
+	    				<div class="nero-desc" data-aos="fade-in">
+	    					You, as the player, become one of the first testers of this device. To test it out you need to go on journeys and collect as much dust as you can. If this experiment proves to be successful humanity will have a tool to train their dust weavers and bring all of them together to beat Eon back once and for all!
+	    				</div>  			
+	    			</div>
+	    			<!-- ********************The End Of the Nero section ************************ -->
+
+	    			<!-- ************************* The bottom section ******************************-->
+	    			<div id="bottom-sec">
+	    				<div id="request" class="bottom-key" data-aos="flip-up">
+	    					Get The BETA Key
+	    				</div>
+	    				<div class="subscribe" data-aos="flip-up">
+		    				<form method=POST action="{{ url_for('subscrib') }}">	
+		    					<input type="Email" placeholder="Subscribe Your Email" title="Subscribe Your Email" name="Email" size=27 class="zone-text" >
+	    					</form>
+	    				</div>
+	    				{% with messages = get_flashed_messages() %}
+						   {% if messages %}
+						      {% for message in messages %}
+						         <div class="message_sub" style="  position: relative; color: red; top: 10%; left:45%;">{{ message }}<div>
+						      {% endfor %}
+						   {% endif %}
+						{% endwith %}
+
+							<!-- feed back systeme -->
+							<a href="#footer-sec"><img src="../static/images_prov/feedback.png" class="feedbacks" data-aos="flip-up" title="click to show The FeedBacks"></a>
+						
+	    			</div>
+	    			<!--  ********************* The end of the bottom secion *************************-->
+
+	    			<div id="feedback_sec">
+	    				<h3 style="position: absolute; color: white;top: 10%;left: 38%;">Tell Us What You Think </h3>
+	    				<label class="feed-display">x</label>
+	    				<div style="font-size:11px;">
+	    					<form method=POST action="{{ url_for('feedback') }} ">
+	    						<label class="pseudo" for="pseudo">Pseudo : </label>
+	    						<input name="pseudo" type="text" id="pseudo-feedb" size=25 placeholder="pseudo">
+	    						<br>
+	    						<label class="comment" for="comment">Comment : </label> <br>
+	    						<textarea name="comment" type="text" id="comment-feedb" row="4" cols="25" placeholder="comment" ></textarea>
+	    						<input type="submit" style="position: absolute;top: 25%;left: 35%;font-size: 17px;">
+	    					</form>
+	    				</div>
+	    				<div class="container-feeds">
+		    				{% for feedb in feedbs %}
+		    				<div id="feedbacks_list" >
+		    					<label style="color:green; font-size: 20px;">{{ feedb["pseudo"] }}</label> <strong> : </strong> 
+		    					<label style="color:black; font-size: 11px;">{{ feedb["comment"] }}</label>
+		    					<a href="./delfeedback?_id={{ feedb['_id'] }}"><label class="glyphicon glyphicon-trash del-f" style="position:relative; cursor: pointer; color: rebeccapurple; float: right; transform: translate(-65%,65%); opacity:0;"></label></a>
+		    				</div>
+		    				{% endfor %}
+		    			</div>
+	    			</div>
+
+	    			<!-- *********************** The footer section ******************** -->
+	    			<div id="footer-sec">
+		    			<div data-aos="zoom-in">
+		    				<img src="../static/images_prov/logo-bottom.png" class="logo-footer">
+		    				<a href="https://www.facebook.com/GrowPlayground"><img src="../static/images_prov/facebook-logo.png" class="facebook-logo"></a>
+		    				<img src="../static/images_prov/twitter-logo.png" class="twitter-logo">
+		    				<a href="mailto:grow.playground@gmail.com" target="_top"><img src="../static/images_prov/contact.png" class="contact" title="grow.playground@gmail.com"></a>
+
+		    				<span  class="privacy"> Privacy </span>
+		    				<span class="terms"> Terms </span>
+		    				<span class="notice"> @2018 Grow PlayGround .CRI</span>
+	    				</div>
+	    			</div>
+	    			<!--******************** The End Of the fouter section *************************-->
+
+
+
+	    			<!-- Pop Up main page -->
+
+
+							<div id="Main-PopUp" data-aos="fade-in">
+									<div id="Main-PopUp-bg" class="close"></div>
+										<div id="Main-PopUp-main">
+
+											<img src="../static/images/closeIcon.png" class="closeIcon close"/>
+											<!-- <img src="../static/images/Main-PopUp1.png" class="Main-PopUp-img" > -->
+											<!-- <a href="{{ url_for('register') }}"><img src="../static/images/joinUs.png" class="Main-PopUp-joinUs"></a> -->
+												<!-- <a href="{{ url_for('connect') }}"><img src="../static/images/connect.png" class="Main-PopUp-connect"></a>-->
+										</div>
+							</div>
+	
+					<!-- End Pop Main Page  -->
+
+					<!-- login pop up page -->
+
+
+							<div id="login-PopUp">
+									<div id="login-PopUp-bg" class="close"></div>
+										<div id="login-PopUp-main">
+											<img src="../static/images/closeIcon.png" class="closeIcon close"/>
+											<img src="../static/images_perso/login-ico.gif" class="logo-login-ico">
+											<img src="../static/images_perso/login.png" class="logo-login">
+
+											<form method=POST action="{{ url_for('login') }}" style="text-align:center; padding-top:10%;">
+												<label for="username">Username</label>
+                    							<input type="text" class="control-user" name="username" placeholder="Username" style="margin-left:10px;">
+                    								<br>
+							                    <label for="pass">Password </label>
+							                    <input type="password" class="control-pass" name="pass" placeholder="Password" style="margin-left:13px;">
+							                    	<br>
+                								<button type="submit" class="btn-submit" style="margin-top:20px;">Log In</button>
+											</form>
+
+										</div>
+							</div>
+	
+					<!-- End login pop up main page  -->
+
+
+					<!-- Sign Up pop up page -->
+
+
+							<div id="signUp-PopUp">
+									<div id="signUp-PopUp-bg" class="close"></div>
+										<div id="signUp-PopUp-main">
+											<img src="../static/images/closeIcon.png" class="closeIcon close"/>
+											<img src="../static/images_perso/signup-ico.gif" class="logo-login-ico">
+											<img src="../static/images_perso/signUp.png" class="logo-login">
+
+											<form method=POST action="{{ url_for('register') }}" style="text-align:center; padding-top:5%;">
+								             	 <label for="username">Username</label>
+                    							<input type="text" class="control-user" name="username" placeholder="Username" style="margin-left:10px;">
+                    								<br>
+                    							<label for="Email">E-mail</label>
+                    							<input type="email" class="control-user" name="Email" placeholder="E-mail" style="margin-left:35px;">
+                    								<br>
+							                    <label for="pass">Password </label>
+							                    <input type="password" class="control-pass" name="pass" placeholder="Password" style="margin-left:13px;">
+							                    	<br>
+							                    <label for="pass"> Key </label>
+							                    <input type="text" class="control-pass" name="Key" placeholder="Beta-Key" style="margin-left:52px;">
+							                    	<br>
+								                <button type="submit" class="btn-register" style="margin-top:20px;">Register</button>
+								            </form>
+
+
+										</div>
+							</div>
+	
+					<!-- end Sign Up  -->
+
+
+
+					<!-- game pop up page -->
+
+
+							<div id="game-PopUp">
+									<div id="game-PopUp-bg" class="close"></div>
+										<div id="game-PopUp-main">
+											<img src="../static/images/closeIcon.png" class="closeIcon close"/>
+											<img src="../static/images_prov/sorry.gif" class="sorry"/>
+											<div class="text">
+												The Beta Version Is Coming Soon !!!
+											</div>
+											
+
+										</div>
+							</div>
+	
+					<!-- End game pop up main page  -->
+
+
+					<!-- social pop up page -->
+
+
+							<div id="social-PopUp">
+									<div id="social-PopUp-bg" class="close"></div>
+										<div id="social-PopUp-main">
+											<img src="../static/images/closeIcon.png" class="closeIcon close"/>
+											<img src="../static/images_prov/sorry.gif" class="sorry"/>
+											<div class="text">
+												waaff waff !!!
+											</div>
+											
+
+										</div>
+							</div>
+	
+					<!-- End social pop up main page  -->
+
+
+					<!-- your javascript file : -->
+						<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+       					<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+				        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+					    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.js"></script>
+				       <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+				       <script type="text/javascript" src="../static/js/Grow-PlayGround-main.js"></script>
+
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/bPopup/0.11.0/jquery.bpopup.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/bPopup/0.11.0/jquery.bpopup.min.js"></script>
+
+
+							<script>
+							  AOS.init({
+							    easing: 'ease-in-out-sine'
+							  });
+							</script>
+
+	</body>
+</html>
+

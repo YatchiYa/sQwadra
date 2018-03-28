@@ -1,0 +1,497 @@
+
+<!doctype html>
+<html lang="en-EN">
+	<head>
+		<meta charset="UTF-8" >	
+		<!-- we set this for our page of the different boxes !! -->
+		<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+		<!-- this is for the small icon in the onglet :) -->
+		<link rel="shortcut icon" type="image/X-icon" href="../static/images/icon.png">
+		<!-- seting the option : Compatibilities-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale = 1.0, width=device-width">	
+
+  	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  	<!-- If you want to use jquery and bootstrap -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+
+
+
+	    <!--  script calendar -->
+		<!-- <script type="text/javascript" src="../static/js/main.js"></script> -->
+		<script type="text/javascript" src="../static/js/calendar.js"></script>
+
+
+	<!--  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  -->
+
+	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.js"></script>
+		<script type="text/javascript" src="../static/js/main.js"></script>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+		
+   		<title> Main Page</title>
+
+	</head>
+
+	<body>
+		<a class="logout" href="{{ url_for('logout') }}"><img src="../static/images/logout.png"></a>
+		<audio src="../static/multimedia/audio/tokyo_ghoul.mp3" controls loop  style="z-index:100; position: absolute;width: 50px;border-radius: 60px;left: 96%; height: 20px;"></audio>
+
+				<div class="demo-2">
+					<div class="content">
+		                <div id="large-header" class="large-header">
+		                    <canvas id="demo-canvas"></canvas>
+		                </div>
+		            </div>         
+				</div>
+
+				
+		        <script src="../static/js/canvas.js"></script>
+
+
+
+
+
+
+		<div id="Grow_playground">
+
+			        <img src="../static/images/link-boxes2.png" class="link-boxes">
+			        <img src="../static/images/link-boxes3.png" class="link-boxes1">
+			        <img src="../static/images/link-boxes4.png" class="link-boxes2">
+			        <img src="../static/images/link-boxes5.png" class="link-boxes3">
+
+
+
+						<!-- SideBar Box -->
+					<div id="sideBar">
+
+							<div class="avatarContainerPosition">
+						      <div class="avatarContainer">
+						        <div class="healthContainer">
+						        </div>
+						        <div class="avatarImageContainer">
+						        </div>
+						      </div>
+						    </div>
+						    <div class="experienceContainer">
+						      <div class="levelContainer">
+						        <span class="level"></span>
+						      </div>
+						      <div class="experienceBar experienceBarOne">
+						        <span class="experienceSpanOne"></span>
+						      </div>
+						    </div>
+
+						    <div class="vaultContainer">
+						      <div class="goldContainer">
+						      </div>
+						      <div class="marketContainer">
+						        <div class="buyApproval">
+						          <span class="buyButtonYes"> Yes </span>
+						          <span class="buyButtonNo"> No </span>
+						        </div>
+						        <div class="marketImageContainer">
+						        </div>
+						      </div>
+						    </div>
+
+					</div>
+					<!-- End SideBar-->
+
+					<!-- Container of the different boxes-->
+					<div id="container" @click.left="closeMenu">
+
+						<!-- Habits Box -->
+						<div id="habits">
+
+								<h2 class="colormio">Dailies</h2>
+									<header>
+										<div class="principal">
+											<div class="wrapp">
+												<form class="formulario" action="">
+													<input class="Dailies-input" type="text" id="tareaInput" maxlength="20" placeholder="Add New Dailies"  title=" Add Dailies ">
+													<input type="button" onclick="habitss()" class="boton" id="btn-agregar" value="Add Dailies">
+												</form>
+											</div>
+										</div>
+									</header>
+								<section>
+									<div class="tareas">
+
+											<ul class="lista" id="lista">
+												<!--<li class="dai"><label for="descrip"><a href="#"></a></label><br><input type="texte" id="descrip" name="descrp" value="description">
+
+												</li>
+												<!--<li class="d-t" @mousemove="showOption" @mouseLeave="opacity=0">
+													<div class="dte">
+														<input class="checkday" type="checkbox" />
+													</div>
+
+
+													<label class="glyphicon glyphicon-calendar calendarItem" title="Click on the calendar to select a deadline "></label>
+													<label class="glyphicon glyphicon-pencil editItem" v-if="opacity"></label> -->
+
+											</ul>
+
+										</div>
+								</section>
+								
+								<script src="../static/js/dailies.js"></script>->
+
+						</div>
+						<!-- End Habits Box -->
+
+
+						<!-- Skills Box  -->
+						<div id="skills">
+							<!-- {% if user["coun"] == '0' %} {% endif %}-->
+							<div class="lockS-bg"></div>
+							<img src="../static/images_prov/lock.png" class="lockS">
+							 
+
+													<h1>Skill In Training</h1>
+									<nav class="Menu">
+										<ul>
+
+											<li class="menu-stats"><a href="Stats.html">Stats</a></li> 
+											<li class="menu-recommended"><a href="Recommended.html">Recommended</a></li>
+											<li class="menu-add"><a href="add.html"><i class="fa fa-plus" aria-hidden="true"></i></a> <!-- ajout de la croix avec <i> -->
+												<ul class="addmenu"> <!-- ajout du sous-menu add list -->
+													<li><a href="#">Add List</a></li>
+												</ul>
+											 </li>
+										</ul>
+									</nav>
+								
+
+										<div class="progressBar1">  
+						<!-- ....................................................................... -->
+
+											<div class="Skillbox">
+												<div class="skill_progress1" >
+													<p>Social</p>
+												    <p></p>
+
+												<div class="barrecolor1"><i class="fa fa-users" aria-hidden="true"></i></div>
+												</div>
+											</div>
+										
+							<!-- ....................................................................... -->
+
+											<div class="Skillbox">
+												<div class="skill_progress2"> 
+												<p>Health</p>
+												<p></p><!-- en fonction de la progression de l'utilisateur  -->
+												
+												<div class="barrecolor2"><i class="fa fa-heart" aria-hidden="true"></i></div>
+											</div>
+										</div>
+						<!-- ....................................................................... -->
+
+											<div class="Skillbox">
+												<div class="skill_progress3">
+												<p>Experience</p>
+												<p></p><!-- en fonction de la progression de l'utilisateur  -->
+												 
+												<div class="barrecolor3"><i class="fa fa-diamond" aria-hidden="true"></i></div>
+											</div>
+										</div>
+						<!-- ....................................................................... -->
+
+											<div class="Skillbox">
+												<div class="skill_progress4">
+												<p>Skill</p>
+												<p></p><!-- en fonction de la progression de l'utilisateur  -->
+												 
+
+												<div class="barrecolor4"><i class="fa fa-bolt" aria-hidden="true"></i></div>
+											</div>
+										</div>
+						<!-- ....................................................................... -->
+
+											<div class="Skillbox">
+												<div class="skill_progress5">
+												<p>Knowledge</p>
+												<p></p><!-- en fonction de la prograssion de l'utilisateur  -->
+												 
+												<div class="barrecolor5"><i class="fa fa-tree" aria-hidden="true"></i></div>
+											</div>
+										</div>
+						<!-- ....................................................................... -->
+
+										</div> 
+
+
+						</div>
+						<!-- End Skills Box -->
+
+
+						<!--  ToDos Box  -->
+						<ToDos id="ToDos">
+
+							<header-todos class="header-list">
+							</header-todos>
+							
+							<general-task id="general-task">
+								<header>
+									<form id="input-task" method=POST action="{{ url_for('todo') }}">
+											<input name="name" class="addToDo-input" v-model="newtask" @keyup.enter="addTask" type="text" placeholder=" what are you planing for ?  *-* " size="40" title=" Add To Do " autofocus autocomplete="off">
+									</form>
+								</header>
+								<section>	
+									
+									<ul class="todo-list">
+										{% for todo in todos %}
+										<li class="todo-task">
+
+											<a href="./remove?_id={{ todo['_id'] }}"><input class="toggle" type="checkbox"></a>
+											<div class="todo-task-element">
+											
+												<form method=POST action="{{ url_for('update') }} " style="margin-top: -20px;margin-left: 15px;">
+													<label class="todo-task-li"> {{ todo["name"] }} </label>
+													<input name="quickEdit" type="text" class="editText" title="Enter : Validate / Esc : Cancel" value={{ todo["name"] }} >
+													<label class="btn btn-success saveItem">save</label>
+													<label class="btn btn-fail cancelItem">cancel</label>
+												</form>
+											</div>					
+											<a href="./remove?_id={{ todo['_id'] }}"><label class="glyphicon glyphicon-trash delete"></label></a>
+
+
+											<label class="glyphicon glyphicon-calendar calendarItem" title="Click on the calendar to select a deadline -->"> <span class="calendarDeadline">set your deadline !</span></label>
+
+
+											<input type="text" class="setDeadline" title="set your deadline." size="8" value= {{ todo["deadline"] }}>
+											
+											<label class="glyphicon glyphicon-calendar TheDeadLine" title="Click on the calendar to select a deadline -->"><span class="The_DeadLine"> Due in days</span></label>
+											
+											<label class="glyphicon glyphicon-pencil editItem"></label>
+											<img src="../static/images_prov/dust.png" class="dust-award">
+										</li>
+									{% endfor %}
+									</ul>
+								</section>
+								<footer>
+									<img class="img-all" src="../static/images/all.png" title="show all tasks">
+									<label class="glyphicon glyphicon-menu-right" style="position: absolute; z-index: 1000;top: 50%;left: 94%;font-size: 15px; cursor:pointer;" ></label>
+
+								</footer>
+							</general-task>
+
+								<!-- the Custom Menu on left click -->
+<!--
+  			date.day			<transition name="">
+							<ol class="custom-menu" v-if="showMenu" :style="{ top:top, left:left }">
+									<li id="edit-Menu" class="glyphicon glyphicon-pencil"> Edit </li>
+									<li id="remove-Menu" class="glyphicon glyphicon-trash"> Remove </li>
+							</ol>
+						</transition>
+-->						
+							<!-- End of Custom Menu -->
+
+							<!-- General ToDos-->
+
+  						
+
+							<!-- END general ToDos -->
+
+							<div class="counter" style="position: absolute;
+														border: 1px solid black;
+														width: 25px;
+														height: 25px;
+														margin-left: 155px;
+														margin-top: -2px;
+														border-radius:7px">
+														{{ count }}
+
+							</div>
+
+						</ToDos>
+
+							
+
+						
+
+
+						<!-- End ToDos Box -->
+
+
+						<!-- Calendar Box  -->
+						<div id="Calendar">
+
+
+		   					<div id="notes">
+								    <p id="fenetre">Notes</p>
+								    <textarea  name="Notes" id="Notes"  placeholder="veuillez entrer vos notes" style="margin:0px; height: 111px; width: 238px;"></textarea>
+								    <menu id="menuNotes">
+									<button id="cancel" type="reset">Annuler</button>
+									<button type="submit">Confirmer</button>
+								    </menu>
+								</div>
+						    <script type="text/javascript">
+							calendrier();
+						    </script>
+
+						</div>
+						<!-- End Calendar Box -->
+
+												<!--  POP Up Modal Edit To-Dos -->
+
+							<div id="modal-ToDos">
+								<div class="modal_ToDos-bg close"></div>
+								<div class="modal_ToDos-List">
+
+									<!-- <img src="images/closeIcon.png" class="closeIcon close"/> -->
+									<div id="modal-first_part">
+										<div class="head">
+												<h1 class="modal-t"><strong >Edit To-Do </strong></h1>
+											
+												<button class="failled">Cancel</button>
+												<button class="success">save</button>
+											
+										</div>
+										<form id="modal-container" method=POST >
+											<label class="modal-title" for="title"><strong>Title*</strong></label> <br/>
+											<input name="name" class="modal-title-field" type="text" placeholder="what do you want to do ?" size="35" value=""><br/>
+											<label class="modal-textarea" for="note"> <strong>notes</strong></label> <br/>
+											<textarea class="modal-note" name="note" rows="5" cols="40" placeholder="notification"></textarea>
+										</form>
+									</div>
+									<div id="modal-second-part">
+										<div id="checklist">
+											<h2 class="title-checklist"><strong>Checklist</strong></h2>
+											<form id="checklist-fomulaire" method="post" action="traitement.py">
+												<button class="glyphicon glyphicon-plus plus"></button>
+												<input id="input-checklist" type="text" placeholder="New Check List" size="35">
+											</form>
+										</div>
+										<div id="Difficlty">
+											<h2 class="difficulty"><strong>Difficulty</strong></h2>
+										</div>
+										<div class="rating-difficulty">
+											<span class="glyphicon glyphicon-star star0"></span>
+											<span class="glyphicon glyphicon-star star1" ><span class="glyphicon glyphicon-star star2"></span><br/></span>
+											<span class="glyphicon glyphicon-star star3"><span class="glyphicon glyphicon-star star4"></span><span class="glyphicon glyphicon-star star5"></span></span>
+										</div>
+										<div class="name-rating-difficulty">
+											<p>Normal </p>
+											<p>Difficult </p>
+											<p>Crazy </p>
+								</div>
+								</div>
+										<div id="edit-ToDos-delete" class="glyphicon glyphicon-trash"> Delete This Task	</div>
+								</div>
+							</div>
+
+
+					</div>
+					<!-- End of Container -->
+
+						<transition name="fade">
+							<all-Todos id="all-Todos">
+								<img src="../static/images/closeIcon.png" class="closeIcon-all">
+
+								<h3 class="all-Todos-title"><strong>All The Way There Is To Do</strong></h3>
+								<ul id="all_there_is">
+										{% for todo in todos %}
+										<li class="todo-task"> x </li>
+										{% endfor %}
+								</ul>
+							<div id="blocks">
+								<div id="Important_urgent"> 				<!--  block important and urgent -->
+									<div id="title-IU">
+										<h1> Important &amp Urgent (10%)</h1>
+									</div>
+									<ul id="important_urgent-task">
+
+									</ul>
+								</div>
+
+								<div id="important">					<!--  block important -->
+									<div id="title-I">
+										<h1> Important (90%)</h1>
+									</div>
+									<ul id="important-task">
+
+									</ul>
+
+								</div>
+
+								<div id="urgent">						<!-- block urgent -->
+									<div id="title-U">
+										<h1> Urgent </h1>
+									</div>
+									<ul id="urgent-task">
+
+									</ul>
+								</div>
+
+								<div id="not_important-urgent">			<!--  block not important and not urgent -->
+									<div id="title-NIU">
+										<h1> Not Important &amp Not Urgent </h1>
+									</div>
+									<ul id="not_important-urgent-task">
+
+									</ul>
+								</div>
+							</div>
+							</all-Todos>
+						</transition>
+
+		</div>
+
+
+
+					<!-- your javascript file : -->
+					
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+			
+			// draggable effect of the all todos box
+			$( function() {
+		  	  $("#all-Todos").draggable();
+		  	  $( "#all-Todos" ).resizable();
+		 	 } );
+			
+			// sortable Todo lists
+			  $( function() {
+			    $( ".todo-list" ).sortable();
+			    $( ".todo-list" ).disableSelection();
+			  } );
+
+					
+			// drag list
+			
+			// first we need to make it draggable 
+			$('.todo-task').draggable({
+
+			    revert : 'invalid',
+				cursor : 'move' // will at his first position if not in the dragable place
+			});
+		  	  $('#important_urgent-task').droppable();
+
+		</script>
+			<!--  if you want to use vue.js  -->
+
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+		<script type="text/javascript" src="../static/vue.js/todo-vue.js"></script>
+
+		<script type="text/javascript" src="../static/js/sideBar.js"></script>
+		<script type="text/javascript" src="../static/js/console.js"></script>
+		<script type="text/javascript" src="../static/js/avatar.js"></script>
+	
+
+
+	</body>
+</html>
