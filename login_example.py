@@ -1,6 +1,7 @@
 # define my librairies
 import os
 import datetime
+import re
 
 from flask import Flask, render_template, url_for, request, session, redirect, flash
 from flask_pymongo import PyMongo
@@ -11,9 +12,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import (LoginManager, current_user, login_required,
-                            login_user, logout_user, UserMixin, AnonymousUserMixin,
-                            confirm_login, fresh_login_required)
+from flask_login import LoginManager, current_user, login_required, login_user, logout_user, UserMixin, AnonymousUserMixin, confirm_login, fresh_login_required
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
 
 from werkzeug.security import generate_password_hash, check_password_hash  #hash password
@@ -96,8 +95,29 @@ class ToDo():
         return self.title
 
 
+#Skills Class
+class Skills():
+    def __init__(self, title=None):
+        self.title = title
+        self.user = session['username']
+
+    def save(self):
+        skills= mongo.db.skills
+        skills.insert({ "user" : self.user, "title" : self.title })
+        return self.title
 
 
+#Dailies Class
+class Dailies():
+    def __init__(self, title=None, categories=None):
+        self.title = title
+        self.categories = categories
+        self.user = session['username']
+
+    def save(self):
+        dailies= mongo.db.dailies
+        dailies.insert({ "user" : self.user, "title" : self.title, "categories":self.categories })
+        return self.title
 
 
 
@@ -116,12 +136,14 @@ def index():
             #Display the all Tasks
         todos=mongo.db.todos
         users=mongo.db.users
+        skills = mongo.db.skills
         date = datetime.datetime.now()
 
         user_l = users.find({'name' : session['username']})
         todos_now = todos.find({'user' : session['username'], 'categories': "all" })
-        todos_all = todos.find({'user' : session['username'], 'categories': "all" })
-        return render_template('Main.html', todos=todos_now, todosAll=todos_all, user=user_l, date=date)
+        todos_all = todos.find({'user' : session['username'], 'categories': "imp" })
+        skills_active = skills.find({'user' : session['username']})
+        return render_template('Main.html', todos=todos_now, todosAll=todos_all, user=user_l, skills=skills_active ,date=date)
 
     feedbs=mongo.db.feedbs
     feedbs_l = feedbs.find()
@@ -229,12 +251,14 @@ def todo():
 
         return ('',204)
 
+    return ('',204)
+
 
 
 #remove Todo
 @app.route("/remove")
 def remove ():
-    #Deleting a Task with various references
+    #Deleting a Task with various reference/addSkills,
     todos=mongo.db.todos
     key=request.values.get("_id")
     todos.remove({"_id":ObjectId(key)})
@@ -248,6 +272,42 @@ def update ():
     todos=mongo.db.todos
     data=request.form['quickEdit']
     return key
+
+
+
+#add Skill
+@app.route("/addSkill", methods=['POST','GET'] )
+def addSkill():
+    skills = mongo.db.skills
+    if request.method == 'POST':
+        name=request.values.get("skill_input")
+        newSkill = Skills(name)
+        if name !='':
+            newSkill.save()
+            return redirect("/")
+
+        return ('',204)
+
+    return ('',204)    
+
+
+#add dailies
+@app.route("/addDailies", methods=['POST','GET'] )
+def addDailies():
+    dailies = mongo.db.dailies
+    if request.method == 'POST':
+        name=request.values.get("dailies_input")
+        cat = request.values.get("da_img")
+        newDailies = Dailies(name,cat)
+        if name !='':
+            newDailies.save()
+            return redirect("/")
+
+        return ('',204)
+
+    return ('',204)  
+
+
 
 #feedback systeme
 #add feedback
