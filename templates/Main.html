@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en-EN">
 	<head>
@@ -116,39 +115,25 @@
 						<!-- Habits Box -->
 						<div id="habits">
 
-								<h2 class="colormio">Dailies</h2>
-									<header>
-										<div class="principal">
-											<div class="wrapp">
-												<form class="formulario" action="">
-													<input class="Dailies-input" type="text" id="tareaInput" maxlength="20" placeholder="Add New Dailies"  title=" Add Dailies ">
-													<input type="button" onclick="habitss()" class="boton" id="btn-agregar" value="Add Dailies">
-												</form>
-											</div>
-										</div>
-									</header>
-								<section>
-									<div class="tareas">
+							<div class="Dailies_title"> Dailies </div>
+							<div id="Dailies_input">
+								<div class="front_input_bg">
+									<span class="glyphicon glyphicon-plus addDailies"></span>
+								</div>
+								<form method=POST action="{{url_for('addDailies')}}" >
+									<input name="dailies_input" class="dailies_input" type="text" placeholder="add a Daily" size="40" >
+									
+									<div class="dailies_categories">
+										<input type="image" name="da_img" value="knowledge" class="d_knowledge" src="../static/images_skills/knowledge.png" alt="kn" title="knowledge">
+										<input type="image" name="da_img" value="experience" class="d_experience" src="../static/images_skills/experience.png" title="experience">
+										<input type="image" name="da_img" value="s_imsocialage" class="d_social" src="../static/images_skills/social.png" title="social">
+										<input type="image" name="da_img" value="health" class="d_health" src="../static/images_skills/health.png" title="health">
+										<input type="image" name="da_img" value="skills" class="d_skills" src="../static/images_skills/skills.png" title="skills">
+									</div>
 
-											<ul class="lista" id="lista">
-												<!--<li class="dai"><label for="descrip"><a href="#"></a></label><br><input type="texte" id="descrip" name="descrp" value="description">
+								</form>
+							</div>
 
-												</li>
-												<!--<li class="d-t" @mousemove="showOption" @mouseLeave="opacity=0">
-													<div class="dte">
-														<input class="checkday" type="checkbox" />
-													</div>
-
-
-													<label class="glyphicon glyphicon-calendar calendarItem" title="Click on the calendar to select a deadline "></label>
-													<label class="glyphicon glyphicon-pencil editItem" v-if="opacity"></label> -->
-
-											</ul>
-
-										</div>
-								</section>
-								
-								<script src="../static/js/dailies.js"></script>->
 
 						</div>
 						<!-- End Habits Box -->
@@ -157,82 +142,80 @@
 						<!-- Skills Box  -->
 						<div id="skills">
 							<!-- {% if user["coun"] == '0' %} {% endif %}-->
-							<div class="lockS-bg"></div>
-							<img src="../static/images_prov/lock.png" class="lockS">
+<!--							<div class="lockS-bg"></div>
+							<img src="../static/images_prov/lock.png" class="lockS"> -->
 							 
+									<div class="Skills_title"> Skills In Training </div>
 
-													<h1>Skill In Training</h1>
-									<nav class="Menu">
-										<ul>
+									<div id="skills_bar">
+										  	<ul id="list-skills-bar">
+										    	<li class="list-skills-bar stats"><a href="#stats">Stats</a></li>
+										    	<li class="list-skills-bar recommended"><a href="#recommended">Recommended</a></li>
+										    	<!-- python part for the skills -->
+										    	{% for skill in skills %}
+										    	<li class="list-skills-bar {{skill["title"]}}"><a href="#{{skill["title"]}}"> {{ skill["title"] }} </a></li>
+										    	{% endfor %}
+												<span class="glyphicon glyphicon-plus addskills"></span>
+										    </ul>
 
-											<li class="menu-stats"><a href="Stats.html">Stats</a></li> 
-											<li class="menu-recommended"><a href="Recommended.html">Recommended</a></li>
-											<li class="menu-add"><a href="add.html"><i class="fa fa-plus" aria-hidden="true"></i></a> <!-- ajout de la croix avec <i> -->
-												<ul class="addmenu"> <!-- ajout du sous-menu add list -->
-													<li><a href="#">Add List</a></li>
-												</ul>
-											 </li>
-										</ul>
-									</nav>
-								
+											<div id="stats" class="bbox">
+												<!-- social -->
+												<div class="social_skill"><img src="../static/images_skills/social.png" class="social_img"> <span style="float:right;" >Social lv 1<span></div>
 
-										<div class="progressBar1">  
-						<!-- ....................................................................... -->
+												<!-- health -->
+												<div class="health_skill"><img src="../static/images_skills/health.png" class="health_img"> <span style="float:right;" >Health lv 1<span></div>
 
-											<div class="Skillbox">
-												<div class="skill_progress1" >
-													<p>Social</p>
-												    <p></p>
+												<!-- Experience -->
+												<div class="experience_skill"><img src="../static/images_skills/experience.png" class="experience_img"> <span style="float:right;" >Experience lv 1<span></div>
 
-												<div class="barrecolor1"><i class="fa fa-users" aria-hidden="true"></i></div>
-												</div>
+												<!-- Skills -->
+												<div class="Skills_skill"><img src="../static/images_skills/skills.png" class="Skills_img"> <span style="float:right;" >Skills lv 1<span></div>
+
+
+												<!-- Knowledge -->
+												<div class="Knowledge_skill"><img src="../static/images_skills/knowledge.png" class="Knowledge_img"> <span style="float:right;" > Knowledge lv 1<span></div>
+
 											</div>
-										
-							<!-- ....................................................................... -->
+											<div id="recommended" class="bbox">
+												<div class="Knowledge_skill"><img src="../static/images_skills/knowledge.png" class="Knowledge_img"> <span style="float:right;" > Creative Thinking <span></div>
 
-											<div class="Skillbox">
-												<div class="skill_progress2"> 
-												<p>Health</p>
-												<p></p><!-- en fonction de la progression de l'utilisateur  -->
+												<div class="experience_skill"><img src="../static/images_skills/experience.png" class="experience_img"> <span style="float:right;" > Decision Making <span></div>
+
+												<div class="health_skill"><img src="../static/images_skills/health.png" class="health_img"> <span style="float:right;" > Sports <span></div>
 												
-												<div class="barrecolor2"><i class="fa fa-heart" aria-hidden="true"></i></div>
+
+												<div class="social_skill"><img src="../static/images_skills/social.png" class="social_img"> <span style="float:right;" > Problem Solving <span></div>
 											</div>
+									</div>		
+
+									<div id="adding_skill_container">
+										<form method=POST action="{{ url_for('addSkill') }}">
+											<input class="skill_input" type="text" name="skill_input" placeholder="Write title Of your new list here" size="40">
+										</form>
+										
+										<label class="suggestions_skills">Suggestions : </label>
+										<div class="Happiness_Recipes">
+											<span> Happiness Recipes </span>
+											<span  class="glyphicon glyphicon-star-empty" style="color:gold;"></span>
+											<span  class="glyphicon glyphicon-star-empty" style="color:gold;"></span>
+											<span  class="glyphicon glyphicon-star-empty" style="color:gold;"></span>
+											<span  class="glyphicon glyphicon-star-empty" style="color:gold;"></span>
+											<span  class="glyphicon glyphicon-star-empty" style="color:gold;"></span>
+											<br>
+											<span> Find Exemples tasks <a href="#">here</a> ! </span>
+
 										</div>
-						<!-- ....................................................................... -->
+										<div class="Beacons">
+											<span> Beacons </span>
+											<span  class="glyphicon glyphicon-star-empty" style="color:gold;"></span>
+											<span  class="glyphicon glyphicon-star-empty" style="color:gold;"></span>
+											<span  class="glyphicon glyphicon-star-empty" style="color:gold;"></span>
+											<span  class="glyphicon glyphicon-star-empty" style="color:gold;"></span>
+											<br>
+											<span> Find Exemples tasks <a href="#">here</a> ! </span>
 
-											<div class="Skillbox">
-												<div class="skill_progress3">
-												<p>Experience</p>
-												<p></p><!-- en fonction de la progression de l'utilisateur  -->
-												 
-												<div class="barrecolor3"><i class="fa fa-diamond" aria-hidden="true"></i></div>
-											</div>
 										</div>
-						<!-- ....................................................................... -->
-
-											<div class="Skillbox">
-												<div class="skill_progress4">
-												<p>Skill</p>
-												<p></p><!-- en fonction de la progression de l'utilisateur  -->
-												 
-
-												<div class="barrecolor4"><i class="fa fa-bolt" aria-hidden="true"></i></div>
-											</div>
-										</div>
-						<!-- ....................................................................... -->
-
-											<div class="Skillbox">
-												<div class="skill_progress5">
-												<p>Knowledge</p>
-												<p></p><!-- en fonction de la prograssion de l'utilisateur  -->
-												 
-												<div class="barrecolor5"><i class="fa fa-tree" aria-hidden="true"></i></div>
-											</div>
-										</div>
-						<!-- ....................................................................... -->
-
-										</div> 
-
+									</div>
 
 						</div>
 						<!-- End Skills Box -->
@@ -242,6 +225,7 @@
 						<ToDos id="ToDos">
 
 							<header-todos class="header-list">
+							ToDo-List
 							</header-todos>
 							
 							<general-task id="general-task">
@@ -313,7 +297,6 @@
 														margin-left: 155px;
 														margin-top: -2px;
 														border-radius:7px">
-														{{ count }}
 
 							</div>
 
@@ -470,7 +453,15 @@
 			    $( ".todo-list" ).disableSelection();
 			  } );
 
+
+			  // skills-bar
+			    $( function() {
+				    $( "#skills_bar" ).tabs();
+				  } );	
 					
+
+
+
 			// drag list
 			
 			// first we need to make it draggable 
