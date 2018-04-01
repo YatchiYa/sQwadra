@@ -130,6 +130,8 @@ $(document).ready( function()
 
 
 
+	// add a skill
+	$("#skills").on('click','.addskills',showaddskill);
 
 	/* ----------------------  Funciton -------------------------  ---------------------------------------------------------*/
 
@@ -275,7 +277,7 @@ $(document).ready( function()
 
 		
 	//  showing options
-			function showOption(event){
+	function showOption(event){
 				$(this).find('.calendarItem').css({
 					'opacity':'1'
 				});
@@ -286,7 +288,7 @@ $(document).ready( function()
 
 	
 	// hiding option
-			function hideOption(event){
+	function hideOption(event){
 				$(this).find('.calendarItem').css({
 					'opacity':'0'
 				});
@@ -295,8 +297,8 @@ $(document).ready( function()
 			}
 
 
-			// showing the different box in all tasks 
-			function oth (event) {
+	// showing the different box in all tasks 
+	function oth (event) {
 				$(this).next().toggle(400);
 	}
 
@@ -314,6 +316,54 @@ $(document).ready( function()
 
 
 
+	// add skills function 
+	function showaddskill(event){
+		$("#adding_skill_container").toggle();
+	}
+
+
+
+	// dailies part 
+
+	$('#habits').on('click','.front_input_bg',function(){
+		$('.front_input_bg').hide();
+		$('#Dailies_input').css({
+			'opacity':'1'
+		});
+	});
+
+	/* //hiding the dailies input on click out of the input 
+
+	$('#Grow_playground').on('mouseout','#Grow_playground',function(){
+			$('#Dailies_input').css({
+				'opacity':'0'
+		});
+			$('.front_input_bg').show();
+
+		});
+	*/
+
+
+	$('#habits').on('keypress', function(event){
+		var currentTextDailies = $(this).parent().find('.dailies_input').val();
+		if (event.keyCode === 13){
+			event.preventDefault();
+			if (currentTextDailies != ""){
+				$('.dailies_input').css({
+					'opacity':'0'
+				});
+				$('.dailies_categories').show();
+				$('.dailies_categories').css({
+					'z-index':'1'
+				});
+			}
+		}
+	});
+
+	$('.dailies_categories').on('click','input',function(){
+		var c = $(this).attr('title');
+		return "{{url_for('addDailies')}} "
+	});
 
 
 
@@ -324,6 +374,29 @@ $(document).ready( function()
 
 
 
+
+
+	//  Skills testing ***************************************************
+
+	/* for adding a skill
+
+	var countSkills = 0; // counting the number of skills submited
+
+	$('#skills').on('keypress', function(event){
+		if (event.keyCode === 13){
+			var currentTextSkill = $('.skill_input').val();  // grabbing the value of the input
+			$('.addskills').remove();
+			$('#list-skills-bar').append('<li class="list-skills-bar ' + currentTextSkill +'"><a href="#' + currentTextSkill +'"> ' + currentTextSkill + '</a></li>');
+			$('#list-skills-bar').append('<span class="glyphicon glyphicon-plus addskills"></span>');
+			$('.skill_input').val("");
+			event.preventDefault();
+			$('#skills_bar').append('<div class="bbox" id="'+ currentTextSkill +'"> hyt </div>');
+			$("#adding_skill_container").hide();
+			countSkills++;
+		}
+	});
+
+	*/
 
 
 	/* $('#addItem').on('click',addItem); */            /*  if you use the button submit task version */

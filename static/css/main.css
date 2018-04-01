@@ -95,16 +95,17 @@ body{
 }
 
 .header-list{ 
-  position: absolute;
-  transform:translate(140%,80%);
+  position: relative;
   font-size: 15px;
   color: rgb(24,255,0);
   font-family: 'LDPU';
+  margin-left: 35%;
+  margin-top: 4%;
 }
 
 #general-task{
   position: relative;
-  padding-top: 15%;
+  padding-top: 5%;
   font-size: 10px;
 }
 
@@ -196,6 +197,7 @@ body{
   font-size: 9px;
   position: absolute;
   margin-left: 36px;
+  display: none;
 }
 
 /*  display the calendar */
@@ -307,6 +309,7 @@ body{
 	box-shadow: -3px 3px 6px #eeeeee;
 	z-index: 1000;
 	border: 5px groove greenyellow;
+  display: none;
 }
 .all-Todos-title{
   margin-top: 10px;
@@ -1173,19 +1176,311 @@ li .cancelItem{
 
 /*        ***************************************************** SKILL's  To Check  ******************************************  */
 
-#skills h2{
-  color: #00FFFF;
-  text-align: center;
-  font-family: phosphate;
-  font-size: 220%;
-
+#skills{
+  overflow: hidden;
 }
+/* title */
+.Skills_title{
+  position: relative;
+  font-size: 13px;
+  color: rgb(216, 7, 73);
+  font-family: 'LDPU';
+  margin: 5% 28%;
+}
+/*  navigation bar */
+
+#list-skills-bar{
+  display: flex;
+  list-style: none;
+  border: 1px solid #e68b8b;
+  padding-left: 0px;
+  margin: 2% 6%;
+}
+
+.list-skills-bar{
+  padding: 0px 8px;
+  border-right: 1px solid #e68b8b;
+}
+
+.list-skills-bar:hover{
+  border: 2px groove black;
+}
+
+/* button to add a skills */
+.addskills{
+  font-size: 11px;
+  padding: 4px;
+  border-right: 1px solid #e68b8b;
+  cursor: pointer;
+}
+
+.addskills:hover{
+  transform: scale(1.1);
+}
+
+
+
+
+/* the different fields */
+.bbox{
+  position: relative;
+  height: 193px;
+  width: 324px;
+  border: 1px groove #f9e6f0;
+  margin-left: 23px;
+}
+
+
+/* stats field */
+#stats{
+}
+
+
+/* social skills */
+
+.social_skill{
+  position: relative;
+  margin-top: 7px;
+  margin-left: 12px;
+  width: 294px;
+  height: 22px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  margin-bottom: 10px;
+}
+.social_img{
+  width: 35px;
+  z-index: 1;
+  transform: translate(0%,-12%);
+}
+
+/* health skills */
+
+.health_skill{
+  position: relative;
+  margin-top: 7px;
+  margin-left: 12px;
+  width: 294px;
+  height: 22px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  margin-bottom: 10px;
+}
+.health_img{
+  width: 35px;
+  z-index: 1;
+  transform: translate(0%,-12%);
+}
+
+
+/* experience skills */
+
+.experience_skill{
+  position: relative;
+  margin-top: 7px;
+  margin-left: 12px;
+  width: 294px;
+  height: 22px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  margin-bottom: 10px;
+}
+.experience_img{
+  width: 35px;
+  z-index: 1;
+  transform: translate(0%,-12%);
+}
+
+
+
+/* Skills skills */
+
+.Skills_skill{
+  position: relative;
+  margin-top: 7px;
+  margin-left: 12px;
+  width: 294px;
+  height: 22px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  margin-bottom: 12px;
+}
+.Skills_img{
+  width: 35px;
+  z-index: 1;
+  transform: translate(0%,-12%);
+}
+
+
+/* social skills */
+
+.Knowledge_skill{
+  position: relative;
+  margin-top: 7px;
+  margin-left: 12px;
+  width: 294px;
+  height: 22px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+.Knowledge_img{
+  width: 35px;
+  z-index: 1;
+  transform: translate(0%,-12%);
+}
+
+
+
+
+
+/* recomended field */
+#recommended{
+}
+
+.list-skills-bar a {
+  color: #6f2525;
+  text-decoration: none;
+  font-style: normal;
+}
+
+
+/* skill box input */
+#adding_skill_container{
+  position: relative;
+  height: 185px;
+  width: 320px;
+  border: 1px solid #e36ea8;
+  z-index: 1;
+  top: -63%;
+  background: white;
+  margin-left: 22px;
+  border-radius: 5px;
+  padding-right: 10px;
+  box-shadow: 1px 2px 20px gold;
+  display: none;
+}
+
+.ar_s{
+  color: #e36ea8;
+  left: 53%;
+  transform: translate(0%,-145%);
+}
+
+/* adding a skill */
+.skill_input{
+  font-size: 11px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.suggestions_skills{
+  font-size: 12px;
+  position: relative;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.Happiness_Recipes{
+  border: 1px solid black;
+  padding-left: 10px;
+  margin-left: 10px;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.Beacons{
+  border: 1px solid black;
+  padding-left: 10px;
+  margin-left: 10px;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+
+
+/*        ***************************************************** Dailies  To Check  ******************************************  */
+
+#habits{
+  overflow: hidden;
+}
+/* title */
+
+.Dailies_title{
+  position: relative;
+  font-size: 16px;
+  color: rgb(216, 7, 214);
+  font-family: 'LDPU';
+  margin: 5% 38%;
+}
+
+#Dailies_input{
+  position: relative;
+  padding: 5px 8px;
+  margin: 0px 65px;
+  background: #f4dff9;
+  border-radius: 6px;
+  opacity: 0;
+}
+
+#Dailies_input:hover{
+  opacity: 1;
+}
+
+.dailies_input{
+  position: relative;
+  font-size: 10px;
+}
+
+.front_input_bg{
+  position: absolute;
+  z-index: 1;
+  height: 98%;
+  width: 101%;
+  background: #dad4d4;
+  border-radius: 6px;
+  margin-left: -9px;
+  margin-top: -5px;
+  cursor: pointer;
+}
+
+.addDailies{
+  left: 48%;
+  margin-top: 2%;
+}
+
+.dailies_categories{
+  position: relative;
+  width: 300px;
+  height: 30px;
+  margin-top: -24px;
+  margin-left: 20px;
+  z-index: -1;
+}
+
+.dailies_categories input{
+  width: 35px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*
 
 #skills .Menu nav{
   width: :40%;
   background-color: white;
   position: absolute;
-  top: 50%;
+  top: 5
   left: 50%;
   transform: translate(-50%,-50%);
   padding: 20px;
@@ -1195,13 +1490,14 @@ li .cancelItem{
   
 #skills a{
   font-family: phosphate;
-  border:2px double black; /* pour les bordures du menu */
+  border:2px double black; /* pour les bordures du menu 
 }
+
 
 #skills .addmenu a{
 
   
-  /*text-shadow: black 3px 2px, white 2px 1px, #000000 -1px -1px, #000000 1px -1px;*/
+  text-shadow: black 3px 2px, white 2px 1px, #000000 -1px -1px, #000000 1px -1px;
 
 
 }
@@ -1327,7 +1623,7 @@ li .cancelItem{
   margin: 0px ;
 }
 
-.barrecolor1 /* jauge */
+.barrecolor1 jauge 
 {
  background: red;
  width: 1%;
@@ -1348,7 +1644,7 @@ li .cancelItem{
   margin: 0px ;
 }
 
-.barrecolor2 /* jauge */
+.barrecolor2  jauge 
 {
  background: green;
  width: 1%;
@@ -1369,7 +1665,7 @@ li .cancelItem{
   margin: 0px ;
 }
 
-.barrecolor3 /* jauge */
+.barrecolor3 jauge 
 {
  background: yellow;
  width: 1%;
@@ -1391,7 +1687,7 @@ li .cancelItem{
   margin: 0px ;
 }
 
-.barrecolor4 /* jauge */
+.barrecolor4  jauge 
 {
  background: brown;
  width: 1%;
@@ -1412,18 +1708,18 @@ li .cancelItem{
   margin: 0px ;
 }
 
-.barrecolor5 /* jauge */
+.barrecolor5  jauge 
 {
  background: blue;
  width: 1%;
  height:30px;
 }
 
-
+*/
 
 
 /*  *********************************************** Dailies   ***********************************************  */
-
+/*
 .wrapp {
   border-top: 0px;
   margin: auto;
@@ -1477,9 +1773,7 @@ border-bottom: 5px;
 .principal .formulario .boton:hover {
   border: 1px solid #fff;
 }
-
-/*/* - Tareas - */
-
+- Tareas -
 }
 
 .tareas  {
@@ -1514,6 +1808,8 @@ border-bottom: 1px solid #B6B6B6;
   text-decoration: underline;
 
 }
+
+*/
 
 
 
