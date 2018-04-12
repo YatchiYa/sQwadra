@@ -116,24 +116,75 @@
 						<div id="habits">
 
 							<div class="Dailies_title"> Dailies </div>
+
+
 							<div id="Dailies_input">
 								<div class="front_input_bg">
 									<span class="glyphicon glyphicon-plus addDailies"></span>
 								</div>
-								<form method=POST action="{{url_for('addDailies')}}" >
+								<form method=POST class="form-dailies">
 									<input name="dailies_input" class="dailies_input" type="text" placeholder="add a Daily" size="40" >
 									
 									<div class="dailies_categories">
-										<input type="image" name="da_img" value="knowledge" class="d_knowledge" src="../static/images_skills/knowledge.png" alt="kn" title="knowledge">
-										<input type="image" name="da_img" value="experience" class="d_experience" src="../static/images_skills/experience.png" title="experience">
-										<input type="image" name="da_img" value="s_imsocialage" class="d_social" src="../static/images_skills/social.png" title="social">
-										<input type="image" name="da_img" value="health" class="d_health" src="../static/images_skills/health.png" title="health">
-										<input type="image" name="da_img" value="skills" class="d_skills" src="../static/images_skills/skills.png" title="skills">
+										
+
+
+										<img name="da_img1" value="knowledge" class="d_knowledge" src="../static/images_skills/knowledge.png" alt="kn" title="knowledge" style="cursor:pointer;"></a>
+										
+
+										<img name="da_img" value="experience" class="d_experience" src="../static/images_skills/experience.png" title="experience" style="cursor:pointer;">
+										<img name="da_img" value="s_imsocialage" class="d_social" src="../static/images_skills/social.png" title="social" style="cursor:pointer;">
+										<img name="da_img" value="health" class="d_health" src="../static/images_skills/health.png" title="health" style="cursor:pointer;">
+										<img name="da_img" value="skills" class="d_skills" src="../static/images_skills/skills.png" title="skills" style="cursor:pointer;">
 									</div>
 
-								</form>
+								</form>	
 							</div>
+							
 
+							
+							<ul id="dailies-box">
+
+
+								<li class="dailies-list_d" style="display:none;">
+									<label class="categorie_dailies_d">
+									
+									</label>
+									<label class="title_dailies_d">
+										
+									</label>
+								</li>
+
+							{% for dailie in dailies %}
+								<li class="dailies-list">
+									<label class="categorie_dailies">
+										{% if dailie["categories"] == "health" %}
+										<img class="img_dailies_list" src="../static/images_skills/health.png" >
+										{% endif %}
+
+										{% if dailie["categories"] == "knowledge" %}
+										<img class="img_dailies_list" src="../static/images_skills/knowledge.png" >
+										{% endif %}
+
+										{% if dailie["categories"] == "experience" %}
+										<img class="img_dailies_list" src="../static/images_skills/experience.png" >
+										{% endif %}
+
+										{% if dailie["categories"] == "skills" %}
+										<img class="img_dailies_list" src="../static/images_skills/skills.png" >
+										{% endif %}
+
+										{% if dailie["categories"] == "social" %}
+										<img class="img_dailies_list" src="../static/images_skills/social.png" >
+										{% endif %}
+									</label>
+									<label class="title_dailies">
+										{{dailie["title"] }}
+									</label>
+								</li>
+
+							{% endfor %}
+							</ul>
 
 						</div>
 						<!-- End Habits Box -->
@@ -263,6 +314,27 @@
 											<label class="glyphicon glyphicon-pencil editItem"></label>
 											<img src="../static/images_prov/dust.png" class="dust-award">
 										</li>
+
+										<ul id="menu_li" style="position: relative;
+
+z-index: 1000;
+
+top: -23%;
+
+list-style: none;
+
+background: rgba(242, 136, 254, 0.5);
+
+height: 25px;
+
+width: 47px;
+
+margin-left: 50px;
+
+padding-left: 3px;
+display:none;">
+											<li style="cursor:pointer;"> remove </li>
+										</ul>
 									{% endfor %}
 									</ul>
 								</section>
@@ -388,7 +460,7 @@
 								<h3 class="all-Todos-title"><strong>All The Way There Is To Do</strong></h3>
 								<ul id="all_there_is">
 										{% for todo in todos %}
-										<li class="todo-task"> x </li>
+										<li class="todo-task"> todo["name"] </li>
 										{% endfor %}
 								</ul>
 							<div id="blocks">

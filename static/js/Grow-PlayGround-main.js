@@ -164,6 +164,38 @@ $('a[href^="#"]').on('click', function(event) {
 				});
 	});
 
+
+	
+
+
+	// data display : with ajax function 
+	$('.form-subsc').on('submit', function(event) { // On submit or keyUp Entrer
+
+		$.ajax({	// calling ajax function 
+			data : {
+				email : $('.zone-text').val() // grabing the value of the input Email 
+			},
+			type : 'POST', // define the method
+			url : '/subscrib' // references to the path on github
+		})
+		.done(function(data) {
+
+			if (data.error) { // display the data if error 
+				$('.message_sub').text(data.error).show();
+			}
+			else if (data.success) { // display the data if success 
+				$('.message_sub').text(data.success).show();
+			}
+			else { // display the data if the call is other than Post 
+				$('.message_sub').text(data.none).show();
+			}
+		});
+
+		event.preventDefault(); // display the function of the submit 
+
+	});
+
+
 });
 //  verification sign Up 
 

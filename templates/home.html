@@ -38,7 +38,6 @@
 
    	<body>
    		<div class="scrollTop">
-   			<a href="#"><img src="../static/images_prov/GoTop.png" class="textToTop"></a>
    			<a href="#"><img src="../static/images_prov/GoTop.gif" class="DragonTop"></a>
    		</div>
 	    		<img src="../static/images_prov/dust-is.png" class="dust-is" data-aos="flip-down">	
@@ -58,7 +57,7 @@
 		    					<li class="home"> Game </li>
 		    					<li class="blog"><a href="{{ url_for('story') }}"> Story </a></li>
 		    					<li class="about_us"><a href="{{ url_for('aboutus') }}"> About Us </a></li>
-		    					<li class="request_demo"> Social Media</li></a>
+		    					<li class="request_demo"> Social Media</li>
 		    					<li id="login_signup">
 		    						<div class="login-signup">
 				    					<span class="login"> Login </span>
@@ -214,10 +213,11 @@
 	    					Get The BETA Key
 	    				</div>
 	    				<div class="subscribe" data-aos="flip-up">
-		    				<form method=POST action="{{ url_for('subscrib') }}">	
+		    				<form method=POST class="form-subsc">	
 		    					<input type="Email" placeholder="Subscribe Your Email" title="Subscribe Your Email" name="Email" size=27 class="zone-text" >
 	    					</form>
 	    				</div>
+	    				<!-- 
 	    				{% with messages = get_flashed_messages() %}
 						   {% if messages %}
 						      {% for message in messages %}
@@ -225,6 +225,10 @@
 						      {% endfor %}
 						   {% endif %}
 						{% endwith %}
+	-->
+
+							 <div class="message_sub" style="  position: relative; color: ##06b9ff; top: 10%; left:42%; z-index:1000; display:none; "></div>
+
 
 							<!-- feed back systeme -->
 							<a href="#footer-sec"><img src="../static/images_prov/feedback.png" class="feedbacks" data-aos="flip-up" title="click to show The FeedBacks"></a>

@@ -360,9 +360,28 @@ $(document).ready( function()
 		}
 	});
 
-	$('.dailies_categories').on('click','input',function(){
-		var c = $(this).attr('title');
-		return "{{url_for('addDailies')}} "
+
+	
+// addDailies  form-dailies
+	$('.form-dailies').on('click','img',function(event){
+
+		$.ajax({	// calling ajax function 
+			data : {
+				
+				title : $('.dailies_input').val(), // grabing the value of the input Email 
+				categorie : $(this).attr('title')
+			},
+			type : 'POST', // define the method
+			url : '/addDailies' // references to the path on github
+		}).done(function(data) {	
+				$('.dailies-list_d').show(),
+				$('.categorie_dailies_d').append(' <img class="img_dailies_list" src="../static/images_skills/health.png"> '),
+				$('.title_dailies_d').text(data.title)
+			
+		});
+
+		event.preventDefault(); // display the function of the submit 
+
 	});
 
 
@@ -372,6 +391,15 @@ $(document).ready( function()
 
 
 
+$('.todo-list').on('contextmenu','.todo-task', function(event){
+		event.preventDefault();
+		$('#menu_li').css({
+			'display':'block',
+			'top': event.pageX,
+			'left': event.pageY
+		});
+		console.log(event);
+	});
 
 
 
@@ -497,8 +525,7 @@ $(document).ready( function()
 	$('#modal-ToDos').on('click','#edit-ToDos-delete',function(event){
 		console.log(event);
 	});
-	
-		
+
 
 });
 

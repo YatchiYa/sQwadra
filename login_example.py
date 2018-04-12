@@ -3,7 +3,7 @@ import os
 import datetime
 import re
 
-from flask import Flask, render_template, url_for, request, session, redirect, flash
+from flask import Flask, render_template, url_for, request, session, redirect, flash, jsonify
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId # For ObjectId to work
 from pymongo import MongoClient
@@ -137,13 +137,15 @@ def index():
         todos=mongo.db.todos
         users=mongo.db.users
         skills = mongo.db.skills
+        dailies = mongo.db.dailies
         date = datetime.datetime.now()
 
         user_l = users.find({'name' : session['username']})
         todos_now = todos.find({'user' : session['username'], 'categories': "all" })
         todos_all = todos.find({'user' : session['username'], 'categories': "imp" })
         skills_active = skills.find({'user' : session['username']})
-        return render_template('Main.html', todos=todos_now, todosAll=todos_all, user=user_l, skills=skills_active ,date=date)
+        dailies_active = dailies.find({'user' : session['username']})
+        return render_template('Main.html', dailies=dailies_active, todos=todos_now, todosAll=todos_all, user=user_l, skills=skills_active ,date=date)
 
     feedbs=mongo.db.feedbs
     feedbs_l = feedbs.find()
@@ -224,16 +226,15 @@ def logout():
 def subscrib():
     if request.method == 'POST':
         emails = mongo.db.emails
-        existing_emails = emails.find_one({'email' : request.form['Email']})
+        existing_emails = emails.find_one({'email' : request.form['email']})
 
         if existing_emails is None:
-            emails.insert({'email': request.form['Email']})
-            flash('Email Sent With Success !!')
-            return (render_template('home.html'))
+            emails.insert({'email': request.form['email']})
+            return jsonify({'success' : 'your email was sent with success !!'})
 
-        return '<div> You already subscribed :) <br> Check your Email <div>'
+        return jsonify({'error' : 'Your Email already Exists !! '})
 
-    return 'SORRY BUT THE BETA VERSION IS NOT Available For The Moment'        
+    return jsonify({'none' : ' Method Out Of Control : '})     
 
 
 
@@ -296,12 +297,12 @@ def addSkill():
 def addDailies():
     dailies = mongo.db.dailies
     if request.method == 'POST':
-        name=request.values.get("dailies_input")
-        cat = request.values.get("da_img")
+        name= request.form['title']
+        cat = request.form['categorie']
         newDailies = Dailies(name,cat)
         if name !='':
             newDailies.save()
-            return redirect("/")
+            return jsonify({'title':name, 'categorie':cat})
 
         return ('',204)
 
@@ -341,5 +342,5 @@ def delfeedback():
 #lunching the Main Function
 if __name__ == '__main__':
     app.secret_key = 'mysecret'
-    app.run(debug=True)
+    app.run(debug=True, port=8081)
 
